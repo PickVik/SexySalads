@@ -1,0 +1,333 @@
+
+body {
+    font-family: 'Noto Serif';
+    padding:5px;
+    color: #B9E6F2;
+}
+
+/* Header/Blog Title */
+.header {
+    padding: 30px;
+    text-align: left;
+    background: #B9E6F2;
+    border-radius: 6px 6px 0px 0px;
+    margin-left:10px;  
+    margin-right:10px;
+}
+
+
+
+#share-buttons img {
+width: 35px;
+padding: 5px;
+border: 0;
+box-shadow: 0;
+display: inline;
+}
+
+#share-buttons a {
+  transition: transform 0.5s ease-in-out;
+}
+
+#share-buttons:hover a {
+  transform: rotateX(180deg) rotateY(180deg) rotateZ(180deg);
+}
+
+/* Style the top navigation bar */
+.topnav {
+    overflow: hidden;
+    background-color: #8f50e7;
+    border-radius: 0px 0px 6px 6px;
+    margin-left:10px;
+    margin-right:10px;
+}
+
+/* Style the topnav links */
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+
+.topnav ul {
+    list-style-type: none;
+    float: left;
+}
+.topnav ul li {
+    float: left;
+    font-family: 'Noto Serif', serif;
+    font-size: 1.6em;
+    margin-top: 50px;
+}
+.topnav ul li a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 20px 28px;
+    text-decoration: none;
+}
+.topnav ul li a:hover {
+	color: #B9E6F2;
+    background-color: #d5c4f3;
+    
+}
+
+.topnav .logo {
+	float: left; 
+        margin-top: -80px;
+        margin-left: 5px;
+        margin-right: 5px;
+}
+.topnav .logo h1 {
+	color: #B9E6F2;
+	font-size: 6em;
+	letter-spacing: 5px;
+	font-weight: 100;
+	font-family: 'Tangerine', cursive;
+}
+
+.topnav .dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.topnav .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    width: 180px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.topnav .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.topnav .dropdown-content a:hover {background-color: #ddd}
+
+.topnav .dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.topnav .dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {   
+    float: left;
+    width: 75%;
+}
+
+
+
+/* Right column */
+.rightcolumn {
+    float: left;
+    width: 25%;
+    background-color: white;
+    padding-left: 20px;
+    padding-right: 15px;
+    margin-right: 10px;
+}
+
+#username {
+    background-color: #B9E6F2;
+    color: black;
+}
+
+#pwd {
+    background-color: #B9E6F2;
+    color: black;
+}
+#btn {
+    background-color: black;
+    color: #B9E6F2;
+}
+
+a {
+    color: #B9E6F2;
+}
+
+#topics 
+{
+    color: black;
+    font-size: 20px;
+
+}
+
+#topics:hover {
+    background-color: #d5c4f3;
+    text-decoration: none;
+
+    
+}
+/* Add a card effect for articles */
+.card {
+    background-color: #8f50e7;
+    padding: 10px;
+    margin-top: 10px;
+    margin-left:10px;
+    margin-right: 10px;
+    
+}
+
+.card-block {
+    margin: 0 auto;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* CONTENT */
+.content {
+	margin-top: 20px;
+        margin-left: 10px;
+	border-radius: 5px;
+	min-height: 400px;
+}
+.content:after {
+	content: "";
+	display: inline-block;
+	clear: both;
+}
+.content .content-title {
+	margin: 10px 0px;
+	color: #374447;
+	font-family: 'Averia Serif Libre', cursive;
+}
+.content .post {
+        width: 300px;
+	margin: 10px;
+	min-height: 320px;
+	float: left;
+	border-radius: 2px;
+	border: 1px solid #b3b3b3;
+	position: relative;
+        background-color: #8f50e7;
+
+}
+.content .post .category {
+	margin-top: 0px;
+	padding: 3px 8px;
+	color: #374447;
+	background: white;
+	display: inline-block;
+	border-radius: 2px;
+	border: 1px solid #374447;
+	box-shadow: 3px 2px 2px;
+	position: absolute;
+	left: 5px; top: 5px;
+	z-index: 3;
+}
+.content .post .category:hover {
+	box-shadow: 3px 2px 2px;
+	color: white;
+	background: #374447;
+	transition: .4s;
+	opacity: 1;
+}
+.content .post .post_image {
+	height: 260px;
+	width: 100%;
+	background-size: 100%;
+}
+.content .post .post_image {
+	width: 100%;
+	height: 260px;
+}
+.content .post .post_info {
+	height: 100%;
+	padding: 0px 5px;
+	font-weight: 200;
+    font-family: 'Noto Serif', serif;
+}
+.content .post .post_info {
+	color: #222;
+}
+.content .post .post_info span {
+	color: #A6A6A6;
+	font-style: italic;
+}
+.content .post .post_info span.read_more {
+	position: absolute;
+	right: 5px; bottom: 5px;
+}
+
+.footer {
+  height: 50px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  color: white;
+  background-color: #50dae7;
+  text-align: center;
+  margin-top: 20px;
+  margin-right:10px;
+  margin-left: 10px;
+  padding: 20px 20px 20px 40px;
+ 
+}
+
+  
+
+.footer .heart {
+    color: blueviolet;
+}
+
+/* ERROR NOTIFICATION MESSAGES */
+.message {
+	width: 100%; 
+	margin: 0px auto; 
+	padding: 10px 0px; 
+	color: #3c763d; 
+	background: #dff0d8; 
+	border: 1px solid #3c763d;
+	border-radius: 5px; 
+	text-align: center;
+}
+.error {
+	color: #a94442; 
+	background: #f2dede; 
+	border: 1px solid #a94442; 
+	margin-bottom: 20px;
+}
+.validation_errors p {
+	text-align: left;
+	margin-left: 10px;
+}
+.logged_in_info {
+	text-align: right; 
+	padding: 10px;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+    .leftcolumn, .rightcolumn {   
+        width: 100%;
+        padding: 0;
+    }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+    .topnav a {
+        float: none;
+        width: 100%;
+    }
+}
+

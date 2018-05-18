@@ -13,11 +13,14 @@ body {
     border-radius: 6px 6px 0px 0px;
     margin-left:10px;  
     margin-right:10px;
+    height: 20px;
 }
 
 
 
 #share-buttons img {
+position:relative;
+top:-20px;
 width: 35px;
 padding: 5px;
 border: 0;
@@ -143,14 +146,16 @@ display: inline;
 
 #username {
     background-color: #B9E6F2;
+    width: 150px;
     color: black;
 }
 
 #pwd {
     background-color: #B9E6F2;
     color: black;
+    width:150px;
 }
-#btn {
+.btn {
     background-color: black;
     color: #B9E6F2;
 }
@@ -182,9 +187,14 @@ a {
     
 }
 
+
+
 .card-block {
     margin: 0 auto;
+   
 }
+
+
 
 /* Clear floats after the columns */
 .row:after {

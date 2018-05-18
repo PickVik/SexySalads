@@ -11,9 +11,10 @@ class Bootstrap {
 		//print_r($url);
 		
 		if (empty($url[0])) {
-			require 'controllers/index.php';
-			$controller = new Index();
-			$controller->index();
+                        header('location:index');
+			//require 'controllers/index.php';
+			//$controller = new Index();
+			//$controller->index();
 			return false;
 		}
 

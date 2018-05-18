@@ -1,5 +1,6 @@
+
 <div class="row">
-  <div class="col-md-9">
+  <div class="col-md-7">
     <div class="card">
       
      
@@ -26,13 +27,13 @@
         <!-- Added this if statement... -->
 		<?php if (isset($post['topic']['name'])): ?>
 			<a 
-				href="<?php echo 'filtered_posts.php?topic=' . $post['topic']['id'] ?>"
+				href="<?php echo 'filtered_posts?topic=' . $post['topic']['id'] ?>"
 				class="btn category">
 				<?php echo $post['topic']['name'] ?>
 			</a>
 		<?php endif ?>
 
-		<a href="single_post.php?<?php echo $post['slug']; ?>"> 
+		<a href="single_post?post-slug=<?php echo $post['slug']; ?>"> 
 			<div class="carousel-caption">
 				<h3><?php echo $post['title'] ?></h3>
 				<div class="info">
@@ -63,5 +64,4 @@
   </div>
 </div>
   </div>
-
   </div>

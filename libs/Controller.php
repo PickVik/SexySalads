@@ -5,6 +5,7 @@ class Controller {
     function __construct() {
        // echo 'Main controller<br>';
         $this->view= new View();
+        $this->db= new Database();
     }
         
     public function loadModel($name) {

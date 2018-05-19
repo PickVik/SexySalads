@@ -1,6 +1,6 @@
 
 
-<div class="col-md-3" style="float: right">
+<div class="col-md-3">
     <div class="card">
        
       <h4>Log In</h4>
@@ -10,7 +10,7 @@
               <input type="password" id="pwd" name="pwd" placeholder="Password"><br>
               <br>
               <button type="submit" class="btn" name="submit">Login</button>
-              <a href="#">New? Register here</a>
+             <!-- <a href="#">New? Register here</a> -->
                     
           </form>
       </div>
@@ -32,11 +32,12 @@
       </li>
       </ul>
       
+      
     </div>
     <div class="card">
       <h4>Subscribe to my Newsletter</h4>
       <p>Please type your email address below and I'll send you my recipe of the week</p>
-      <form><input type='email' name='email' id='email' placeholder='email'>
+      <form><input type='email' name='email' id='email' placeholder='Email'><br><br>
           <button type='submit' name='submit' class='btn'>Submit</button></form>
     </div>
  </div>

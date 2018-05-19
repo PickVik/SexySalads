@@ -1,6 +1,6 @@
 
 <div class="row">
-  <div class="col-md-7">
+  <div class="col-md-9">
     <div class="card">
       
      
@@ -45,9 +45,12 @@
 	</div>
 <?php endforeach ?>
 
-      <div class="item active">
+     <div class="item active">
           <img src="views/pictures/green-salad.jpg" alt="Green Salad">
-        
+          <div class='carousel-caption'>
+              <h3>Scroll through all our latest posts</h3>
+              
+          </div>
 
   
     </div>

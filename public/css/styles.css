@@ -13,7 +13,7 @@ body {
     border-radius: 6px 6px 0px 0px;
     margin-left:10px;  
     margin-right:10px;
-    height: 20px;
+    height: 10px;
 }
 
 
@@ -43,6 +43,7 @@ display: inline;
     border-radius: 0px 0px 6px 6px;
     margin-left:10px;
     margin-right:10px;
+    height: 150px;
 }
 
 /* Style the topnav links */
@@ -81,7 +82,7 @@ display: inline;
 
 .topnav .logo {
 	float: left; 
-        margin-top: -80px;
+        margin-top: -85px;
         margin-left: 5px;
         margin-right: 5px;
 }
@@ -144,17 +145,12 @@ display: inline;
     margin-right: 10px;
 }
 
-#username {
+#username, #pwd, #email {
     background-color: #B9E6F2;
     width: 150px;
     color: black;
 }
 
-#pwd {
-    background-color: #B9E6F2;
-    color: black;
-    width:150px;
-}
 .btn {
     background-color: black;
     color: #B9E6F2;
@@ -194,6 +190,14 @@ a {
    
 }
 
+
+
+.carousel-caption {
+    background-color: #8f50e7;
+    border: 5px;
+    border-color: black;
+    color: #B9E6F2;
+}
 
 
 /* Clear floats after the columns */
@@ -278,6 +282,10 @@ a {
 	right: 5px; bottom: 5px;
 }
 
+.wrapper {
+    margin:10px;
+}
+
 .footer {
   height: 50px;
   right: 0;
@@ -323,6 +331,52 @@ a {
 .logged_in_info {
 	text-align: right; 
 	padding: 10px;
+}
+div.gallery {
+    border: 1px solid #ccc;
+}
+
+div.gallery:hover {
+    border: 1px solid #777;
+}
+
+div.gallery img {
+    width: 100%;
+    height: auto;
+}
+
+div.desc {
+    padding: 15px;
+    text-align: center;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.responsive {
+    padding: 0 6px;
+    float: left;
+    width: 24.99999%;
+}
+
+@media only screen and (max-width: 700px) {
+    .responsive {
+        width: 49.99999%;
+        margin: 6px 0;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .responsive {
+        width: 100%;
+    }
+}
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
 }
 
 /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */

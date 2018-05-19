@@ -46,7 +46,7 @@
 				<a class="logo" href="<?php echo URL; ?>index"><h1>Sexy Salads</h1></a>
 			</li>
 			  
-                        <li><a href="<?php echo URL; ?>eating-out">Eating Out</a></li>
+                       
 			  <li><a href="<?php echo URL; ?>about">About</a></li>
                         
 			</ul>

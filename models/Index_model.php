@@ -37,10 +37,11 @@ class Index_Model extends Model {
 
         function getTopicNameById($id)
 {
-	$sql = "SELECT name FROM topics WHERE id=$id";
+	$sql = "SELECT topic_name FROM topic WHERE topic_id=$id";
 	$stmt = $this->db->prepare($sql);
         $stmt->execute(); 
 	$topic = $stmt->fetchAll(PDO::FETCH_ASSOC);
-	return $topic['name'];
+	return $topic[0]['topic_name'];
+//        return $topic;
 }
 }

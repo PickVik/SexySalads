@@ -7,7 +7,7 @@ class View {
     }
 
     
-    public function render($name, $objects, $noInclude = false) {
+    public function render($name, $objects=null, $noInclude = false) {
        
         if ($noInclude == true) {
                 require 'views/' . $name . '.php';	

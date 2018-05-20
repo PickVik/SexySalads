@@ -1,33 +1,42 @@
 <?php
 
-class Login_Model extends Model
-{
-	public function __construct()
-	{
-		parent::__construct();
-	}
+class Login_model extends Model {
 
-	public function run()
-	{
-		$sql = "SELECT id FROM users WHERE username = :username AND password = :password";
-		$stmt = $this->db->prepare($sql);
-                $stmt->execute(array(
-			':username' => $_POST['username'],
-			':password' => $_POST['password']
-		));
-		
-		//$data = $stmt->fetchAll();
-		
-		$count =  $stmt->rowCount();
-		if ($count > 0) {
-			// login
-			Session::init();
-			Session::set('loggedIn', true);
-			header('location: ../dashboard');
-		} else {
-			header('location: ../login');
-		}
-		
-	}
-	
+    function __construct() {
+        parent::__construct();
+        
+    }
+    
+   public function login(){
+       
+      
+       $stm = $this->db->prepare("SELECT user_id FROM user WHERE email = :email AND password = :password"); //MD5(:password) - once PW is hashed
+       $stm->execute(array(
+           
+          ':email' =>$_POST['email'],
+           ':password'=>$_POST['password']
+       
+       ));
+       
+       
+       $data = $stm->fetchAll();
+       $row = $stm->rowCount();
+       
+       if ($row >0){
+           
+           //login
+           Session::init();
+           Session::set('loggedIn', true);
+           header('location: ../post/admin');
+          
+           
+       }else {
+           //error
+           header ('location: ../login');
+           
+       }
+       print_r($data);
+   }
+          
+
 }

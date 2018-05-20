@@ -11,8 +11,8 @@ class Single_Post extends Controller {
         $this->view->render('single_post/index');
     }
     function getPostTopic($post_id){
-	$sql = "SELECT * FROM topics WHERE id=
-			(SELECT topic_id FROM post_topic WHERE post_id=$post_id) LIMIT 1";
+	$sql = "SELECT * FROM topics WHERE topic_id=
+			(SELECT topic_id FROM article_topic WHERE article_id=$post_id) LIMIT 1";
 	$stmt = $this->db->prepare($sql);
         $stmt->execute(); 
 	$topic = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -22,7 +22,7 @@ class Single_Post extends Controller {
     function getPost($post_slug){
 	// Get single post slug
 	$post_slug = $_GET['post-slug'];
-	$sql = "SELECT * FROM posts WHERE slug='$post_slug'";
+	$sql = "SELECT * FROM article WHERE slug='$post_slug'";
 	$stmt = $this->db->prepare($sql);
         $stmt->execute(); 
 	$post = $stmt->fetchAll(PDO::FETCH_ASSOC);

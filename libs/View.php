@@ -7,17 +7,15 @@ class View {
     }
 
     
-    public function render($name, $noInclude = false)
-	{
+    public function render($name, $objects, $noInclude = false) {
        
-		if ($noInclude == true) {
-			require 'views/' . $name . '.php';	
-		}
-		else {
-                        require 'views/includes/head_section.php';
-			require 'views/' . $name . '.php';
-			require 'views/includes/footer.php';	
-		}
-}
-  
+        if ($noInclude == true) {
+                require 'views/' . $name . '.php';	
+        }
+        else {
+                require 'views/includes/head_section.php';
+                require 'views/' . $name . '.php';
+                require 'views/includes/footer.php';	
+        }
+    }
 }

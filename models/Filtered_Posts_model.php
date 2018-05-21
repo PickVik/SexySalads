@@ -6,10 +6,11 @@ class Filtered_Posts_Model extends Model {
 	{
 		parent::__construct();
 	}
-function getPost($slug){
+    
+        function getPost($slug){
 	// Get single post slug
-	$post_slug = $_GET['post-slug'];
-	$sql = "SELECT * FROM posts WHERE slug='$post_slug' AND published==1";
+	$post_slug = $_GET['article-slug'];
+	$sql = "SELECT * FROM articles WHERE slug='$article_slug' AND published==1";
 	$stmt = $this->db->prepare($sql);
         $stmt->execute(); 
 	$post = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -17,24 +18,24 @@ function getPost($slug){
 	
 	if ($post) {
 		// get the topic to which this post belongs
-		$post['topic'] = getPostTopic($post['id']);
+		$post['topic'] = getPostTopic($post['article_id']);
 	}
 	return $post;
 }
 
         function getPublishedPostsByTopic($topic_id) {
-	$sql = "SELECT topics . name, posts . *
-    FROM topics
-    LEFT JOIN post_topic ON post_topic . topic_id = topics . id
-    LEFT JOIN posts ON post_topic . post_id = posts . id
-";
-	$stmt = $this->db->prepare($sql);
-        $stmt->execute(); 
-	$posts = $stmt->fetchAll(PDO::FETCH_ASSOC);
+            $sql = "SELECT topics . name, articles . *
+                    FROM topics
+                    LEFT JOIN article_topic ON post_topic . topic_id = topics . id
+                    LEFT JOIN article ON article_topic . article_id = articles . id
+    ";
+            $stmt = $this->db->prepare($sql);
+            $stmt->execute(); 
+            $posts = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 	$final_posts = array();
 	foreach ($posts as $post) {
-		$post['topic'] = getPostTopic($post['id']); 
+		$post['topic'] = getPostTopic($post['article_id']); 
 		array_push($final_posts, $post);
 	}
 	return $final_posts;

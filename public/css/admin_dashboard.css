@@ -71,3 +71,29 @@ ul li:hover{
 .footer .heart {
     color: blueviolet;
 }
+
+.card{
+    margin-top: 7px;
+    padding: 5px;
+    float: none;
+    margin-right: 10px;
+    margin-left: 30px;
+   
+}
+.card :hover{
+    background: white;
+}
+
+.container{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.card-block{
+    padding: 10px;
+}
+
+.btn btn-primary{
+    margin-top: 5px;
+    
+}

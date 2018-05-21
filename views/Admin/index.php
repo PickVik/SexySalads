@@ -11,7 +11,8 @@
     
     
     <div id="sidebar">
-        
+        <a href='post/admin'>Manage articles</a>
+        <a href='post/create_newarticle'>Create articles</a>
         <ul style="list-style-type:none">
                 <li>Manage articles</li>
                 <li>Create article</li>

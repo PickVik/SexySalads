@@ -5,7 +5,7 @@
        
       <h4>Log In</h4>
       <div class="login">
-          <form method="post" action="Login/run">
+          <form method="post" action="login/login">
               <input type="text" id="username" name="username" placeholder="Username"><br>
               <input type="password" id="pwd" name="pwd" placeholder="Password"><br>
               <br>

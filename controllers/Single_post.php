@@ -26,7 +26,7 @@ class Single_Post extends Controller {
 	$stmt = $this->db->prepare($sql);
         $stmt->execute(); 
 	$post = $stmt->fetchAll(PDO::FETCH_ASSOC);
-        //print_r($post);
+       // print_r($post);
         $post = $post[0];
         
         return $post;

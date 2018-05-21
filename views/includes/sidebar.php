@@ -24,9 +24,9 @@
       //print_r($topics);
       foreach ($topics as $topic) {?>
       <ul>
-      <li><a href="<?php echo 'filtered_posts?topic=' . $topic['id']?>" id="topics">
+      <li><a href="<?php echo 'filtered_posts?topic=' . $topic['topic_id']?>" id="topics">
          
-      <?php echo $topic['name'];}?>
+      <?php echo $topic['topic_name'];}?>
      
           </a>
       </li>

@@ -5,10 +5,14 @@ class Admin extends Controller {
         parent::__construct();
     }
     
-    public function topics() {
+    public function index() {
+        $this->view->render('admin/index');
+    }
+    
+   // public function topics() {
 //        $topics = $this->model->getAllTopics();
 //        $this->view->render('admin/topics', $topics);
-        $this->view->render('admin/index');
+     //   $this->view->render('admin/index');
     }
     
 //    public function comments() {
@@ -17,7 +21,6 @@ class Admin extends Controller {
 //    }
     
  
-}
 
 
 // /admin/topics

@@ -9,8 +9,8 @@ class Index_Model extends Model {
         
    
         function getPostTopic($post_id){
-	$sql = "SELECT * FROM topics WHERE id=
-			(SELECT topic_id FROM post_topic WHERE post_id=$post_id) LIMIT 1";
+	$sql = "SELECT * FROM topic WHERE article_id=
+			(SELECT topic_id FROM article_topic WHERE article_id=$post_id) LIMIT 1";
 	$stmt = $this->db->prepare($sql);
         $stmt->execute(); 
 	$topic = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -18,10 +18,10 @@ class Index_Model extends Model {
 }
 
         function getPublishedPostsByTopic($topic_id) {
-	$sql = "SELECT * FROM posts ps 
-			WHERE ps.id IN 
-			(SELECT pt.post_id FROM post_topic pt 
-				WHERE pt.topic_id=$topic_id GROUP BY pt.post_id 
+	$sql = "SELECT * FROM article ps 
+			WHERE ps.article_id IN 
+			(SELECT pt.article_id FROM article_topic pt 
+				WHERE pt.topic_id=$topic_id GROUP BY pt.article_id 
 				HAVING COUNT(1) = 1)";
 	$stmt = $this->db->prepare($sql);
         $stmt->execute(); 

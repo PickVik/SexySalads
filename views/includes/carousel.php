@@ -20,16 +20,17 @@
         $model = new Index_Model();
         $posts = $model->getPublishedPosts();
         //print_r($posts);
-        foreach ($posts as $post): ?>
+        foreach ($posts as $post): 
+            //print_r($post['image']);?>
         
 	<div class="item">
-		<img src="<?php echo 'views/pictures/' . $post['image']; ?>" class="post_image" alt="" style="width:100%;height:100%">
+		<img src="<?php echo $post['image']; ?>" class="post_image" alt="" style="width:100%;height:100%">
         <!-- Added this if statement... -->
-		<?php if (isset($post['topic']['name'])): ?>
+		<?php if (isset($post['topic']['topic_name'])): ?>
 			<a 
-				href="<?php echo 'filtered_posts?topic=' . $post['topic']['id'] ?>"
+				href="<?php echo 'filtered_posts?topic=' . $post['topic']['topic_id'] ?>"
 				class="btn category">
-				<?php echo $post['topic']['name'] ?>
+				<?php echo $post['topic']['topic_name'] ?>
 			</a>
 		<?php endif ?>
 
@@ -37,7 +38,7 @@
 			<div class="carousel-caption">
 				<h3><?php echo $post['title'] ?></h3>
 				<div class="info">
-					<span><?php echo date("F j, Y ", strtotime($post["created_at"])); ?></span>
+					<span><?php echo date("F j, Y ", strtotime($post["date_created"])); ?></span>
 					<span class="read_more">Read more...</span>
 				</div>
 			</div>

@@ -9,7 +9,7 @@ class Model {
      public function getAllTopics()
 {
 	
-	$sql = "SELECT * FROM topics";
+	$sql = "SELECT * FROM topic";
 	$stmt = $this->db->prepare($sql);
         $stmt->execute();     
         $topics = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -18,7 +18,7 @@ class Model {
 
     public function getPublishedPosts() {
 	
-	$sql = "SELECT * FROM posts WHERE published=true";
+	$sql = "SELECT * FROM article WHERE published=true";
 	$stmt = $this->db->prepare($sql);
         $stmt->execute();     
         $posts = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -27,7 +27,7 @@ class Model {
         
         $final_posts = array();
 	foreach ($posts as $post) {
-		$post['topic'] = getPostTopic($post['id']); 
+		$post['topic'] = getPostTopic($post['topic_id']); 
 		array_push($final_posts, $post);
 	}
 	return $final_posts;

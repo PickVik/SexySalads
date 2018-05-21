@@ -24,7 +24,7 @@
             //print_r($post['image']);?>
         
 	<div class="item">
-		<img src="<?php echo $post['image']; ?>" class="post_image" alt="" style="width:100%;height:100%">
+		<img src="<?php echo 'views/pictures/' . $post['image']; ?>" class="post_image" alt="" style="width:100%;height:100%">
         <!-- Added this if statement... -->
 		<?php if (isset($post['topic']['topic_name'])): ?>
 			<a 

@@ -8,7 +8,7 @@ class Post extends Controller {
         $logged = Session::get('loggedIn');
         if ($logged == false){
         Session::destroy();
-        header('location: ../login');
+        header('location: ../login'); // need to check this 
 
         }
 

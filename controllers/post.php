@@ -61,7 +61,7 @@ class Post extends Controller {
         // we use the given id to get the correct product
         $article = $this->model->update($_GET['article_id'], $_GET['title'], $_GET['body']);
 
-        header('location: admin');
+        header('location: ../admin/index');
 
         }
         }

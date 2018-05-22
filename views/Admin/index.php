@@ -24,11 +24,15 @@
     height: 700px;
     background: #8f50e7;
     float: left;">
+    
+       
+        
         
         <ul style="list-style-type:none; padding: 40px;">
             
-                <li><a href="">Manage articles</a></li>
-                <li><a href="">Create article</a></li>
+           
+                <li><a href='../post/admin'>Manage articles</a></li>
+                <li><a href='../post/create_newarticle'>Create articles</a></li>
                 <li><a href="">Manage comments</a></li>
                 <li><a href="">Manage users</a></li>
                 <li><a href="">Home</a></li>

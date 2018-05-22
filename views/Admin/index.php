@@ -15,7 +15,7 @@
     pdding-botton: 2px;
     width: 50px;
     height: 50px;
-    border-radius: 50px"/><br> <h2>Welcome Admin!</h2></center>
+    border-radius: 50px"/><br><h2>Welcome Admin!</h2></center>
     </div>
    
     
@@ -72,7 +72,6 @@
                     </div>
     </div>
         
-
 
     
    

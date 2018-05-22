@@ -1,6 +1,7 @@
+<?php 
+require_once('views/includes/head_section.php');?>
 
-
-<h1>Post - Welcome admin</h1>
+<h1>Edit delete articles</h1>
 <a href='create_newarticle'>New Post</a>
 <p>Here is a list of all posts</p>
 

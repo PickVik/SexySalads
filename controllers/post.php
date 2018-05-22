@@ -82,7 +82,7 @@ class Post extends Controller {
                    $_GET['image'], $_GET['user_id'], $_GET['topic']);
         
 
-        header('location: admin');
+        header('location: ../admin/index');
         
       
         }

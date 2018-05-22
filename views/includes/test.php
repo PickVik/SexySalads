@@ -1,27 +1,44 @@
-<div class="container" style="display: inline-block;margin-top: 10px">
-    <div class="col-md-2">
+<div class="row">
+<div class="col-md-12">
+    <div class="card" style='margin:25px'>
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="views/pictures/smoked-almond-and-goat-cheese-salad.jpeg">
+      <img src="views/pictures/smoked-almond-and-goat-cheese-salad.jpeg" alt="Smoked almond and goat cheese salad" width="300" height="200">
+    </a>
+    <div class="desc">Add a description of the image here</div>
+  </div>
+</div>
 
-<ul class="list-unstyled">
-  <li class="media">
-    <img class="mr-3" src="views/pictures/salad2.jpg/100x100" alt="Generic placeholder image">
-    <div class="media-body">
-      <h5 class="mt-0 mb-1">List-based media object</h5>
-      Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-    </div>
-  </li>
-  <li class="media my-4">
-    <img class="mr-3" src="views/pictures/salad2.jpg/64x64" alt="Generic placeholder image">
-    <div class="media-body">
-      <h5 class="mt-0 mb-1">List-based media object</h5>
-      Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-    </div>
-  </li>
-  <li class="media">
-    <img class="mr-3" src=".../64x64" alt="Generic placeholder image">
-    <div class="media-body">
-      <h5 class="mt-0 mb-1">List-based media object</h5>
-      Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-    </div>
-  </li>
-</ul>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="views/pictures/vegan-thai-salad.jpg">
+      <img src="views/pictures/vegan-thai-salad.jpg" alt="Vegan Thai Salad" width="600" height="400">
+    </a>
+    <div class="desc">Add a description of the image here</div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="views/pictures/essential-summer-salad.jpg">
+      <img src="views/pictures/essential-summer-salad.jpg" alt="Essential summer salad" width="600" height="400">
+    </a>
+    <div class="desc">Add a description of the image here</div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="views/pictures/why-i-love-salad.jpg">
+      <img src="views/pictures/why-i-love-salad.jpg" alt="Why I love salad" width="600" height="400">
+    </a>
+    <div class="desc">Add a description of the image here</div>
+  </div>
+</div>
+
+<div class="clearfix"></div>
+</div>
+</div>
 </div>

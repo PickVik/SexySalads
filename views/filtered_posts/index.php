@@ -10,8 +10,8 @@ require 'views/includes/navbar.php'; ?>
      <?php 
             if (isset($_GET['topic'])) {
 		$id = $_GET['topic'];
-                $controller = new Filtered_Posts();
-		$posts = $controller->getPublishedPostsByTopic($id);
+                $model = new Filtered_Posts_Model();
+		$posts = $model->getPublishedPostsByTopic($id);
                 //print_r($posts);
 	}
              
@@ -20,7 +20,7 @@ require 'views/includes/navbar.php'; ?>
      ?>
 	<h2 class="content-title">
             <?php 
-               $name = $controller->getTopicNameById($id); echo $name; ?>
+               $name = $model->getTopicNameById($id); echo $name; ?>
             Salads
                 
 	</h2>
@@ -30,7 +30,7 @@ require 'views/includes/navbar.php'; ?>
         
 
 		<div class="post" style="margin-left: 0px;width:49.5%;display:inline-block;padding:5px">
-			<img src="<?php echo $post['image']; ?>" class="post_image" alt="$post['image']" style='width:100%'>
+			<img src="<?php echo 'views/pictures/' . $post['image']; ?>" class="post_image" alt="$post['image']" style='width:100%'>
 			<a href="single_post?post-slug=<?php echo $post['slug']; ?>">
 				<div class="post_info">
 					<h3><?php echo $post['title']; ?></h3>

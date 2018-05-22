@@ -1,7 +1,5 @@
 <?php
-
 class Index_Model extends Model {
-
     public function __construct()
 	{
 		parent::__construct();
@@ -16,7 +14,6 @@ class Index_Model extends Model {
 	$topic = $stmt->fetchAll(PDO::FETCH_ASSOC);
 	return $topic;
 }
-
         function getPublishedPostsByTopic($topic_id) {
 	$sql = "SELECT * FROM article ps 
 			WHERE ps.article_id IN 
@@ -26,7 +23,6 @@ class Index_Model extends Model {
 	$stmt = $this->db->prepare($sql);
         $stmt->execute(); 
 	$posts = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
 	$final_posts = array();
 	foreach ($posts as $post) {
 		$post['topic'] = getPostTopic($post['id']); 
@@ -34,7 +30,6 @@ class Index_Model extends Model {
 	}
 	return $final_posts;
 }
-
         function getTopicNameById($id)
 {
 	$sql = "SELECT topic_name FROM topic WHERE topic_id=$id";

@@ -31,7 +31,7 @@
 				<h2 class="post-title"><?php echo $post['title']; ?></h2>
                                 <hr>
                                 
-                                <img src="<?php echo $post['image']; ?>" class="post_image" alt="$post['slug']" style='width:100%;margin-bottom: 20px'>
+                                <img src="<?php echo 'views/pictures/' . $post['image']; ?>" class="post_image" alt="$post['slug']" style='width:100%;margin-bottom: 20px'>
                                 
                                 <div class="post-body-div">
 

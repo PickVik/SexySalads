@@ -12,6 +12,7 @@ class Login extends Controller {
       
         
         $this->view->render('login/index');
+        
     }
     
     

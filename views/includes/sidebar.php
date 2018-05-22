@@ -5,9 +5,10 @@
        
       <h4>Log In</h4>
       <div class="login">
-          <form method="post" action='login/login'>
-              <input type="text" id="username" name="username" placeholder="Username"><br>
-              <input type="password" id="pwd" name="pwd" placeholder="Password"><br>
+       
+          <form method='post' action='login/login' >
+              <input type="email" id="email" name="email" placeholder="Email"><br>
+              <input type="password" id="password" name="password" placeholder="Password"><br>
               <br>
               <button type="submit" class="btn" name="submit">Login</button>
              <!-- <a href="#">New? Register here</a> -->

@@ -7,8 +7,7 @@ require 'views/includes/navbar.php'; ?>
       <div class='card'>
           
           <h2 class="content-title">All Recipes</h2>
-          <hr>
-
+          
 <?php   $model = new Model();
         $posts = $model->getPublishedPosts();
         //print_r($posts);

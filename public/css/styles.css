@@ -149,7 +149,7 @@ display: inline;
     margin-right: 10px;
 }
 
-#username, #pwd, #email {
+#username, #password, #email {
     background-color: #B9E6F2;
     width: 150px;
     color: black;

@@ -1,19 +1,47 @@
-<p>New article view</p>
+<style> body {color: #8f50e7}</style>
+<title> Sexy Salads | Create New Article ?> </title>
+</head>
+
+<body>
+    <button style="background-color: #8f50e7 "><a href=../admin>Return to Admin page</a></button>
+<h1 style="text-align: center">Create New Article</h1>
+<br>
+<br>
+<div class="container" style="margin-top:5px;width:75%;border-style:dotted;border-width:2px;padding-bottom:10px;" >
 
 <form class="add_article" action='add_article' method='get'>
     
     <input type="hidden" name="article_id"/><br>
-    <label>Title</label><input type="text" name="title" /><br>
-    <label>Body</label><input type="text" name="body"  /><br>
-    <label>Slug</label><input type="text" name="slug"  /><br>
-    <label>Image</label><input type="text" name="image"  /><br>
-    <label>User ID</label><input type="text" name="user_id"  /><br>
+        <h3> <strong> Title <br></strong></h3>
+    <input type="text" name="title" size="100"/><br>
+        <h3> <strong>Body <br></strong></h3>
+    <textarea name="body" rows=10 cols="105"></textarea><br>
+        <h3> <strong>Slug <br></strong></h3>
+    <input type="text" name="slug"  size="100"/><br>
+        <h3> <strong>Image <br></strong></h3>
+        
+    <input type="text" name="image"  size="100"/><br>
+    
+    <form action="" method="post" enctype="multipart/form-data">
+    <h3><strong>Select file to upload:</strong></h3>
+    <input type="file" name="fileToUpload" id="file">
+    <input type="hidden" name="MAX_FILE_SIZE" value=2000000>
+    <br><button type="submit" value="send">Upload</button>
+</form>
+    
+        <h3> <strong>User ID <br></strong></h3>
+    <input type="text" name="user_id"  size="100"/><br>
     <input type="hidden" name="date_created"/><br>
     <input type="hidden" name="last_updated"/><br>
-    <input type="hidden" name="published"/><br>
+            <h3> <strong>Published <br></strong></h3>
+
+    <input type="radio" name="published" value="true"/>Yes<br>
+    <input type="radio" name="published" value="false"/>No<br>
+
     
     
-    Topic <select name="topic">
+    <h3><strong>Topic<br></strong></h3>
+        <select name="topic">
         
         
         <?php foreach($objects as $topic) { ?>
@@ -28,8 +56,10 @@
        <?php } ?> 
     </select>
     <br>
+    <br>
    
-   
-    <label>Add new article</label><input type="submit" name="submit" />
+    <input type="submit" name="Add New Article" />
     
 </form>
+
+</div>

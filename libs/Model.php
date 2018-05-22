@@ -33,4 +33,17 @@ class Model {
 	return $final_posts;
 
         }
+        
+        public function getPost($slug){
+	// Get single post slug
+	$slug = $_GET['post-slug'];
+	$sql = "SELECT * FROM article WHERE slug='$slug'";
+	$stmt = $this->db->prepare($sql);
+        $stmt->execute(); 
+	$post = $stmt->fetchAll(PDO::FETCH_ASSOC);
+       // print_r($post);
+        $post = $post[0];
+        
+        return $post;
+}
 }

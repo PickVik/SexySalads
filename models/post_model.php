@@ -42,20 +42,6 @@ class Post_Model extends Model {
         return $list;
     }
 
-    public function getarticlesbytopicid($topicid) {
-       
-        $list = [];
-        $req = $this->db->query('SELECT article.* FROM article JOIN article_topic ON article.article_id=article_topic.article_id '
-                . 'WHERE topic_id='.$topicid);
-        // we create a list of article objects from the database results
-        foreach ($req->fetchAll() as $article) {
-            $list[] = new Post_Model($article['article_id'], $article['title'], $article['body'],$article['slug'],
-                    $article['image'], $article['user_id'], $article['date_created'], $article['last_updated'], $article['published']);
-        }
-        return $list;
-    }
-    
-    
     public function find_article($article_id) {
         
         //use intval to make sure $id is an integer

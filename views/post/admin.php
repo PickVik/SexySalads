@@ -1,8 +1,7 @@
-<?php 
-require_once('views/includes/head_section.php');?>
 
-<h1>Edit delete articles</h1>
-<a href='create_newarticle'>New Post</a>
+
+<h1>Manage articles</h1>
+
 <p>Here is a list of all posts</p>
 
 <?php foreach($objects as $article) { ?>

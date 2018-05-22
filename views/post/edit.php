@@ -4,6 +4,8 @@
 </head>
 
 <body>
+        <button style="background-color: #8f50e7 "><a href="../admin/index">Return to Admin page</a></button>
+
     <h1 style="text-align: center">Edit: <strong><?php echo $objects->title?></strong></h1>
     <br>
     <br>

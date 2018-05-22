@@ -3,7 +3,7 @@
 </head>
 
 <body>
-    <button style="background-color: #8f50e7 "><a href=../admin>Return to Admin page</a></button>
+    <button style="background-color: #8f50e7 "><a href="../admin/index">Return to Admin page</a></button>
 <h1 style="text-align: center">Create New Article</h1>
 <br>
 <br>
@@ -21,14 +21,14 @@
         <h3> <strong>Image <br></strong></h3>
         
     <input type="text" name="image"  size="100"/><br>
-    
-    <form action="" method="post" enctype="multipart/form-data">
+
+    <form action="upload.php" method="post" enctype="multipart/form-data">
     <h3><strong>Select file to upload:</strong></h3>
     <input type="file" name="fileToUpload" id="file">
     <input type="hidden" name="MAX_FILE_SIZE" value=2000000>
     <br><button type="submit" value="send">Upload</button>
-</form>
-    
+    </form>
+
         <h3> <strong>User ID <br></strong></h3>
     <input type="text" name="user_id"  size="100"/><br>
     <input type="hidden" name="date_created"/><br>

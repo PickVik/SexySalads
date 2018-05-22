@@ -88,18 +88,19 @@ class Post extends Controller {
         }
 
 
+
+        
+
+
+
         function delete(){
+
+
 
         $this->view->render('post/delete');
         }
 
         
-        public function topic(){
-        $topicid=$_GET['topic_id'];
-        print_r($topicid);
-        $posts=$this->model->getarticlesbytopicid($topicid);
-        //print_r($posts);
-        $this->view->render('post/admin', $posts);   
-        }
+        
 
 }

@@ -31,13 +31,21 @@
           </a>
       </li>
       </ul>
-      
-      
+</div>  
+    
+    <div class="card">
+      <h4>Search</h4>
+      <form><input type='text' name='search' id='search_term' placeholder='search term'><br><br>
+          <button type='submit' name='submit' class='btn'>Submit</button></form>
     </div>
+      
+   
     <div class="card">
       <h4>Subscribe to my Newsletter</h4>
       <p>Please type your email address below and I'll send you my recipe of the week</p>
       <form><input type='email' name='email' id='email' placeholder='Email'><br><br>
           <button type='submit' name='submit' class='btn'>Submit</button></form>
+    </div>
+    
     </div>
  </div>

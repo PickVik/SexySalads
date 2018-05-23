@@ -36,8 +36,29 @@
     
     <div class="card">
       <h4>Search</h4>
-      <form><input type='text' name='search' id='search_term' placeholder='search term'><br><br>
-          <button type='submit' name='submit' class='btn'>Submit</button></form>
+     
+          <input type='text' name='search' id='search_term' placeholder='search term'><br><br>
+          <button  name='submit' class='btn'onclick= "search();">Search</button>
+       
+          
+      <script>
+           function search() {
+                  
+            var search_term = document.getElementById("search_term").value;
+            var xhttp;
+            
+            xhttp = new XMLHttpRequest(); //object instantiation
+            xhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+//                    document.getElementById("result").innerHTML = this.responseText;
+                    alert(`You searched for ${search_term}`);
+                    console.log(this.responseText);
+                }
+            };
+            xhttp.open("GET", "/SexySalads/post/search?search_term="+search_term, true);
+            xhttp.send();   
+        }
+      </script>
     </div>
       
    

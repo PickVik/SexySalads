@@ -86,13 +86,7 @@ class Post extends Controller {
         
       
         }
-
-
-
-        
-
-
-
+       
         function delete(){
 
 
@@ -100,7 +94,15 @@ class Post extends Controller {
         $this->view->render('post/delete');
         }
 
-        
-        
+        //function below added for ajax search - work in progress
+        function search(){
+        //1. read search term from query string using GET superglobal
+        //2. send search term to method on post.model
+        //3. model returns results
+        //4. render a view
+            
+            
+            
+        }
 
 }

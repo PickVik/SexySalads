@@ -104,7 +104,7 @@ class Post extends Controller {
             $searchresults = $this->model->show_all(); 
             //$searchresults = $this->model->search($search_term);
             //4. render a view        
-            $this->view->render('post/searchresults', $searchresults);
+            $this->view->render('post/searchresults', $searchresults, true);
             
             
         }

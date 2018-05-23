@@ -1,6 +1,6 @@
 
 <div class="row">
-  <div class="col-md-9">
+  <div class="col-md-9" id="main-content">
     <div class="card">
       
      

@@ -50,7 +50,7 @@
             xhttp = new XMLHttpRequest(); //object instantiation
             xhttp.onreadystatechange = function() {
                 if (this.readyState == 4 && this.status == 200) {
-//                    document.getElementById("result").innerHTML = this.responseText;
+                    document.getElementById("main-content").innerHTML = this.responseText;
                     alert(`You searched for ${search_term}`);
                     console.log(this.responseText);
                 }

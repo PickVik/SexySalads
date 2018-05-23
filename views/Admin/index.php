@@ -1,5 +1,7 @@
+<link rel="stylesheet" href="../../public/css/admin_dashboard.css" type="text/css">
 <title> Admin Dashboard </title>  
 
+</head>
 
 <div id="header" style="width: 100%;
     height: 120px;
@@ -57,7 +59,7 @@
         foreach ($posts as $post):?>
           
 <div class="post" style="margin-left: 0px;width:49.5%;display:inline-block;padding:5px">
-			<img src="<?php echo $post['image']; ?>" class="post_image" alt="" style='width:100%'>
+			<img src="<?php echo 'views/pictures/' . $post['image']; ?>" class="post_image" alt="" style='width:100%'>
 			<a href="single_post?post-slug=<?php echo $post['slug']; ?>">
 				<div class="post_info">
 					<h3><?php echo $post['title']; ?></h3>

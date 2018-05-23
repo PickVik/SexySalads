@@ -4,7 +4,7 @@
 
 <body>
 <div class="container" style="margin-top:5px;width:75%;border-style:dotted;border-width:2px;padding-bottom:10px;" >
-        <form action="" method="post">
+        <form action='add_article' method='get'>
                                 <h3> <strong> Title <br></strong></h3>
                                 <input type="text" name="title" id="title" value="" size="100" ><br>
                                

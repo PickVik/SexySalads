@@ -3,13 +3,13 @@
 </head>
 
 <body>
-    <button style="background-color: #8f50e7 "><a href=../admin>Return to Admin page</a></button>
+    <button style="background-color: #8f50e7 "><a href="../admin/index">Return to Admin page</a></button>
 <h1 style="text-align: center">Create New Article</h1>
 <br>
 <br>
 <div class="container" style="margin-top:5px;width:75%;border-style:dotted;border-width:2px;padding-bottom:10px;" >
 
-<form class="add_article" action='add_article' method='get'>
+<form action='add_article' method='get'>
     
     <input type="hidden" name="article_id"/><br>
         <h3> <strong> Title <br></strong></h3>
@@ -21,6 +21,7 @@
         <h3> <strong>Image <br></strong></h3>
         
     <input type="text" name="image"  size="100"/><br>
+
     
     
     

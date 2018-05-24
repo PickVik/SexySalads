@@ -42,6 +42,17 @@ class Post_Model extends Model {
         return $list;
     }
 
+    //for sidebar ajax search
+    public function searcharticles($search_term) {
+        $list = [];
+        $req = $this->db->query("SELECT * FROM article WHERE title LIKE '%$search_term%' ");
+        foreach ($req->fetchAll() as $article) {
+            $list[] = new Post_Model($article['article_id'], $article['title'], $article['body'],$article['slug'],
+                    $article['image'], $article['user_id'], $article['date_created'], $article['last_updated'], $article['published']);
+        }
+        return $list;
+    }
+    
     public function find_article($article_id) {
         
         //use intval to make sure $id is an integer

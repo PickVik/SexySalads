@@ -102,7 +102,7 @@ class Post extends Controller {
              //2. send search term to method on post.model
              //3. model returns results
             $searchresults = $this->model->searcharticles($search_term); 
-            //$searchresults = $this->model->search($search_term);
+            //$searchresults = $this->model->search($search_term);T
             //4. render a view        
             $this->view->render('post/searchresults', $searchresults, true);
             

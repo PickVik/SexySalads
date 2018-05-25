@@ -2,7 +2,7 @@ body{
     font-family: 'Noto Serif';
     margin: 2px;
     border: 0px;
-    
+    color: #8f50e7;
 }
 
 #header{
@@ -23,6 +23,8 @@ body{
     height: 700px;
     background: #8f50e7;
     float: left;
+    
+
 }
 
 #data{
@@ -40,15 +42,46 @@ body{
     
 }
 
+.nav-pills>li > a{
+    color: black;
+}
+
+.nav-pills > li.active > a, .nav-pills > li > a:hover{
+        background-color:#8f50e7;
+            opacity:0.75;
+
+
+}
+.nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
+    color:black;
+    background-color:#8f50e7;
+    opacity:1;
+    }
+
 ul li{
     padding: 20px;
-    border-bottom: 2px solid gray;
+    border-bottom: 2px solid #8f50e7;
     
 }
 
 ul li:hover{
     background: beige;
     color: black;
+}
+
+.flip {
+    height: 175px;
+    width: 250px;
+    margin-left: 10px;
+}
+.flip img {
+    width: 250px;
+    height: 175px;
+}
+.flip .back {
+    background: #50dae7;
+    color: #fff;
+    text-align: center;
 }
 
 .footer {

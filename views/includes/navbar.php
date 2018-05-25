@@ -22,15 +22,15 @@
     </a>
     
      <!-- Twitter -->
-    <a href="https://twitter.com/share?url=https://simplesharebuttons.com&amp;text=Simple%20Share%20Buttons&amp;hashtags=simplesharebuttons" target="_blank">
+    <a href="https://twitter.com/share?url=http://localhost/SexySalads&amp;text=Come try our Sexy Salads" target="_blank">
         <img src="https://simplesharebuttons.com/images/somacro/twitter.png" alt="Twitter" />
     </a>
     
 </div>
       </div>
-      
+
 <div class="topnav">
-  <div class="col-md-10">
+  <div class="col-md-12">
 			<ul>
 			  <li><a class="active" href="<?php echo URL; ?>index">Home</a></li>
                           <li class="dropdown"><a href="<?php echo URL; ?>recipes">Recipes</a>
@@ -50,6 +50,6 @@
 			  <li><a href="<?php echo URL; ?>about">About</a></li>
                         
 			</ul>
-                        </div>
+                  </div>
 </div>
 

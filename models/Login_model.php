@@ -27,7 +27,7 @@ class Login_model extends Model {
            //login
            Session::init();
            Session::set('loggedIn', true);
-           header('location: ../admin/index');
+           header('location: ../admin');
           
            
        }else {

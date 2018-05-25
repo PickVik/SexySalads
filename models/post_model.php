@@ -104,7 +104,12 @@ class Post_Model extends Model {
         }
         
         
-        
+        function delete(){
+            
+            $req = $this->db->prepare('DELETE FROM article WHERE article_id = :article_id');
+            // the query was prepared, now replace :id with the actual $id value
+            $req->execute(array('article_id' => $article_id));
+        }
        
     }
         

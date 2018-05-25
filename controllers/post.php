@@ -87,11 +87,12 @@ class Post extends Controller {
       
         }
        
-        function delete(){
+         function delete(){
 
+        $this->model->delete($_GET['article_id']);
+        header('location: admin');
 
-
-        $this->view->render('post/delete');
+        //$this->view->render('post/delete');
         }
 
         //function below added for ajax search - work in progress

@@ -22,7 +22,7 @@
     </a>
     
      <!-- Twitter -->
-    <a href="https://twitter.com/share?url=https://simplesharebuttons.com&amp;text=Simple%20Share%20Buttons&amp;hashtags=simplesharebuttons" target="_blank">
+    <a href="https://twitter.com/share?url=http://localhost/SexySalads&amp;text=Come try our Sexy Salads" target="_blank">
         <img src="https://simplesharebuttons.com/images/somacro/twitter.png" alt="Twitter" />
     </a>
     

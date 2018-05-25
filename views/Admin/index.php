@@ -1,7 +1,6 @@
 <link rel="stylesheet" href="../../public/css/admin_dashboard.css" type="text/css">
 <title> Admin Dashboard </title>  
 
-</head>
 
 <div id="header" style="width: 100%;
     height: 120px;

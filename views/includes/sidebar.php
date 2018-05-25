@@ -37,7 +37,7 @@
     <div class="card">
       <h4>Search</h4>
      
-          <input type='text' name='search' id='search_term' placeholder='search term'><br><br>
+          <input type='text' name='search' id='search_term' placeholder='search term' onkeypress="search();" ><br><br>
           <button  name='submit' class='btn'onclick= "search();">Search</button>
        
           
@@ -51,11 +51,11 @@
             xhttp.onreadystatechange = function() {
                 if (this.readyState == 4 && this.status == 200) {
                     document.getElementById("main-content").innerHTML = this.responseText;
-                    alert(`You searched for ${search_term}`);
+//                    alert(`You searched for ${search_term}`);
                     console.log(this.responseText);
                 }
             };
-            xhttp.open("GET", "/SexySalads/post/search?search_term="+search_term, true);
+            xhttp.open("GET", "/SexySalads/filtered_posts/search?search_term="+search_term, true);
             xhttp.send();   
         }
       </script>

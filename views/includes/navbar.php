@@ -28,9 +28,9 @@
     
 </div>
       </div>
-      
+
 <div class="topnav">
-  <div class="col-md-10">
+  <div class="col-md-12">
 			<ul>
 			  <li><a class="active" href="<?php echo URL; ?>index">Home</a></li>
                           <li class="dropdown"><a href="<?php echo URL; ?>recipes">Recipes</a>
@@ -50,6 +50,6 @@
 			  <li><a href="<?php echo URL; ?>about">About</a></li>
                         
 			</ul>
-                        </div>
+                  </div>
 </div>
 

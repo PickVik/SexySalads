@@ -55,7 +55,7 @@
                     console.log(this.responseText);
                 }
             };
-            xhttp.open("GET", "/SexySalads/post/search?search_term="+search_term, true);
+            xhttp.open("GET", "/SexySalads/filtered_posts/search?search_term="+search_term, true);
             xhttp.send();   
         }
       </script>

@@ -94,18 +94,5 @@ class Post extends Controller {
         $this->view->render('post/delete');
         }
 
-        //function below added for ajax search - work in progress
-        function search(){
-            
-            //1. read search term from query string using GET superglobal
-            $search_term = $_GET ['search_term'];
-             //2. send search term to method on post.model
-             //3. model returns results
-            $searchresults = $this->model->searcharticles($search_term); 
-            //$searchresults = $this->model->search($search_term);T
-            //4. render a view        
-            $this->view->render('post/searchresults', $searchresults, true);
-            
-        }
 
 }

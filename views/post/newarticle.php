@@ -3,7 +3,11 @@
 </head>
 
 <body>
+<<<<<<< HEAD
+    <button style="background-color: #8f50e7"><a href=../admin>Return to Admin page</a></button>
+=======
     <button style="background-color: #8f50e7 "><a href="../admin/index">Return to Admin page</a></button>
+>>>>>>> 2ec04c013672bfb02b65b42cfdd678cf2653f2e4
 <h1 style="text-align: center">Create New Article</h1>
 <br>
 <br>

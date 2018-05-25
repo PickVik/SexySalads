@@ -64,4 +64,5 @@ class Filtered_Posts_Model extends Model {
 	return $topic;
         }
     
+    
 }

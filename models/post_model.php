@@ -72,14 +72,15 @@ class Post_Model extends Model {
         }
     }
 
-    public function update($article_id, $title, $body) {
+    public function update($article_id, $title, $body, $slug, $image, $published) {
 
-        $req = $this->db->prepare("UPDATE article set title=:title, body=:body where article_id=:article_id");
+        $req = $this->db->prepare("UPDATE article set title=:title, body=:body, slug=:slug, image=:image, published=:published  where article_id=:article_id");
         $req->bindParam(':article_id', $article_id);
         $req->bindParam(':title', $title);
         $req->bindParam(':body', $body);
-
-
+        $req->bindParam(':slug', $slug);
+        $req->bindParam(':image', $image);
+        $req->bindParam(':published', $published,PDO::PARAM_INT);
         $req->execute();
     }
 

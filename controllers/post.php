@@ -35,7 +35,7 @@ class Post extends Controller {
     }
 
     function open_edit() {
-
+        
         $article = $this->model->find_article($_GET['article_id']);
 
 
@@ -46,14 +46,15 @@ class Post extends Controller {
 
 
 
-        if ($_SERVER['REQUEST_METHOD'] == 'GET') {
-            if (!isset($_GET['article_id'])) {
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+            if (!isset($_POST['article_id'])) {
                 header('location: /errors');
             }
             // we use the given id to get the correct product
-            $article = $this->model->update($_GET['article_id'], $_GET['title'], $_GET['body']);
+             $this->upload_pic();
+            $article = $this->model->update($_POST['title'], $_POST['body'], $_POST['slug'], $_FILES[Post::InputKey]['name'], $_POST['published']);
 
-            header('location: ../admin/index');
+            header('location: ../admin');
         }
     }
 

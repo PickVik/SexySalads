@@ -13,7 +13,7 @@
 <br>
 <div class="container" style="margin-top:5px;width:75%;border-style:dotted;border-width:2px;padding-bottom:10px;" >
 
-<form action='add_article' method='get'>
+<form action='add_article' method='post' enctype="multipart/form-data">
     
     <input type="hidden" name="article_id"/><br>
         <h3> <strong> Title <br></strong></h3>
@@ -22,10 +22,7 @@
     <textarea name="body" rows=10 cols="105"></textarea><br>
         <h3> <strong>Slug <br></strong></h3>
     <input type="text" name="slug"  size="100"/><br>
-        <h3> <strong>Image <br></strong></h3>
         
-    <input type="text" name="image"  size="100"/><br>
-
     
     
     
@@ -35,11 +32,10 @@
     <input type="hidden" name="last_updated"/><br>
             <h3> <strong>Published <br></strong></h3>
 
-    <input type="radio" name="published" value="true"/>Yes<br>
-    <input type="radio" name="published" value="false"/>No<br>
+    <input type="radio" name="published" value=1/>Yes<br>
+    <input type="radio" name="published" value=0/>No<br>
 
-    
-    
+        
     <h3><strong>Topic<br></strong></h3>
         <select name="topic">
         
@@ -57,15 +53,15 @@
     </select>
     
     <br>
+    <h3>Upload your picture here</h3>
     <br>
+    
+    Supported format: Jpeg <input type="file" name="myfile"/><br>
+    
+     
    
     <input type="submit" name="Add New Article" />
     
 </form>
-<form action="" method="post" enctype="multipart/form-data">
-    <h3><strong>Select file to upload:</strong></h3>
-    <input type="file" name="fileToUpload" id="file">
-    <input type="hidden" name="MAX_FILE_SIZE" value=2000000>
-    <br><button type="submit" value="send">Upload</button>
-</form>
+
 </div>

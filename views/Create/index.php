@@ -4,7 +4,7 @@
 
 <body>
 <div class="container" style="margin-top:5px;width:75%;border-style:dotted;border-width:2px;padding-bottom:10px;" >
-        <form action='add_article' method='get'>
+        <form action='add_article' method='get' enctype="multipart/form-data">
                                 <h3> <strong> Title <br></strong></h3>
                                 <input type="text" name="title" id="title" value="" size="100" ><br>
                                
@@ -19,6 +19,14 @@
                             <h3> <strong>Published <br></strong></h3>
                             <input type="text" name="published" value="" size="100"><br>
                             <br>
+                            
+                                <h3>Supported format: jpeg</h3>
+                            <input type="file" name="myfile"/>
+                            <br>
                                 <input type="submit" name="submit" value="Create"><br>
+                                
+                            
+                
+         
         </form>
     </div>	

@@ -1,3 +1,8 @@
+<?php
+
+// header here!! if admin go back to admin page
+?>
+
 <?php if (isset($_GET['post-slug'])) {
                 
                 $controller = new Single_Post();

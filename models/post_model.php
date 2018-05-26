@@ -121,10 +121,20 @@ class Post_Model extends Model {
         }
         
         
-        function delete(){
+        
+        
+    }
+    
+        function upload_image(){
+            
+            
+        }
+    
+        
+        function delete($article_id){
             
             $req = $this->db->prepare('DELETE FROM article WHERE article_id = :article_id');
-            // the query was prepared, now replace :id with the actual $id value
+            $req->bindParam(':article_id', $article_id);
             $req->execute(array('article_id' => $article_id));
         }
        
@@ -190,7 +200,7 @@ class Post_Model extends Model {
         $req->execute(array('id' => $id));
     }*/
 
-}
+
 
 class Topic extends Model {
     

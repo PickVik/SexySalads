@@ -7,6 +7,14 @@ class Login_model extends Model {
         
     }
     
+    
+    // checks login data in database
+    // if correct then heads to admin page
+    // else main page
+    
+    // PASSWORD NEEDS TO BE HASHED!!!
+    
+    
    public function login(){
        
       
@@ -29,7 +37,7 @@ class Login_model extends Model {
            Session::set('loggedIn', true);
            header('location: ../admin');
           
-           
+         // NEEDS TO BE CHECKED - SHOULD TAKE YOU TO MAIN PAGE WHERE WE HAVE THE NAVBAR  
        }else {
            //error
            header ('location: ../login');

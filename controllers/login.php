@@ -7,7 +7,7 @@ class Login extends Controller {
       
     }
 
-    
+    //rendering view but not in use
     function index(){
       
         
@@ -15,6 +15,7 @@ class Login extends Controller {
         
     }
     
+    // calls login from login_model
     
     function login(){
         

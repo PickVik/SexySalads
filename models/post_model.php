@@ -49,7 +49,7 @@ class Post_Model extends Model {
                                 FROM article 
                                 LEFT JOIN article_topic ON article.article_id = article_topic.article_id
                                 LEFT JOIN topic ON article_topic.topic_id = topic.topic_id
-                                WHERE (title LIKE '%$search_term%' OR body LIKE '%$search_term%'or topic_name LIKE '%$search_term%') 
+                                WHERE (title LIKE '%$search_term%' or topic_name LIKE '%$search_term%') 
                                 AND published = 1");                
 
         foreach ($req->fetchAll() as $article) {

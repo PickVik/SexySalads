@@ -9,7 +9,7 @@ require_once('views/includes/head_section.php');?>
 <?php include ('views/includes/navbar.php') ?>      
 
    <div class="row">
-  <div class="col-md-9">
+  <div class="col-md-9" id="main-content">
     <div class="card">
         <div class='clearfix' style='overflow:auto'>
       <h2>About us</h2>

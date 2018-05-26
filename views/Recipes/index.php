@@ -3,7 +3,7 @@
 
 require 'views/includes/navbar.php'; ?>
 <div class="row">
-  <div class="col-md-9">
+  <div class="col-md-9" id="main-content">
       <div class='card'>
           
           <h2 class="content-title">All Recipes</h2>

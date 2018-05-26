@@ -125,10 +125,7 @@ class Post_Model extends Model {
         
     }
     
-        function upload_image(){
-            
-            
-        }
+        
     
         
         function delete($article_id){

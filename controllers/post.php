@@ -2,6 +2,7 @@
 
 class Post extends Controller {
 
+    // if in session then have access to these functions
     function __construct() {
         parent::__construct();
         Session::init();
@@ -12,28 +13,38 @@ class Post extends Controller {
         }
     }
 
+    //rendering view but not in use
+    
     function index() {
 
 
         $this->view->render('post/index');
     }
-
+    
+    // need to be worked on and the button that belongs to it should be on every page if the person is logged in
     function logout() {
 
         Session::destroy();
         header('location: ../login');
         exit;
     }
-
+    
+    
+    
+    // calls show all function from post model and renders a view for it on views/post/admin page 
+    // - this is the manage articles page as we see it(perhaps we should rename that page to manage articles instead of admin)
     function admin() {
 
 
-        // we store all the posts in a variable
+        // we store all the posts in this variable
         $articles = $this->model->show_all();
 
         $this->view->render('post/admin', $articles);
     }
-
+    
+    
+    
+    //calls in find article from post_model and renders view views/post/edit page by article id 
     function open_edit() {
 
         $article = $this->model->find_article($_GET['article_id']);
@@ -41,6 +52,12 @@ class Post extends Controller {
 
         $this->view->render('post/edit', $article);
     }
+    
+    
+    // checks if the article id is there if not goes to errors page
+    // else calls update function from post_model
+    
+    // NEED TO BE UPDATED - MISSING: PUBLISHED, IMAGE UPLOAD, USER, TOPIC
 
     function update() {
 
@@ -56,6 +73,9 @@ class Post extends Controller {
             header('location: ../admin/index');
         }
     }
+    
+    // Calls in the topics and
+    // renders a view/post/newarticle page including topics
 
     function create_newarticle() {
 
@@ -63,13 +83,15 @@ class Post extends Controller {
 
         $this->view->render('post/newarticle', $topics);
     }
-
+    
+    
+    // constans for upload and pic format
     const InputKey = 'myfile';
     const AllowedTypes = ['image/jpeg'];
 
     public function upload_pic() {
 
-
+    // error handling for upload
 
         if (empty($_FILES[Post::InputKey])) {
             die("File Missing!");
@@ -93,13 +115,18 @@ class Post extends Controller {
 
         if (file_exists($dstFile)) {
 
-            // $req->$this->db->
+            
 
             echo "Success";
-            //echo "<a href='Website.html'>Logout</a><br>";
+            
         }
     }
 
+    
+    //calls in upload_pic from post
+    // calls in add_article from post_model and couples it up with the data POSTed in the VIEW
+    // when executed head to admin page
+    
     function add_article() {
 
         $this->upload_pic();
@@ -109,7 +136,11 @@ class Post extends Controller {
 
         header('location: ../admin');
     }
-
+    
+    
+    // deletes article from database based on article_id
+    // when executed head to admin page
+    
     function delete() {
 
         $this->model->delete($_GET['article_id']);

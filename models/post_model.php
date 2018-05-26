@@ -12,10 +12,9 @@ class Post_Model extends Model {
     public $last_updated;
     public $published;
 
-    /* function __construct(){
-      parent::__construct();
-      } */
-
+   
+    // construct and added topic at the end
+    
     function __construct($article_id = 0, $title = 0, $body = 0, $slug = 0, $image = 0, $user_id = 0, $date_created = 0, $last_updated = 0, $published = 0) {
         parent::__construct();
         $this->article_id = $article_id;
@@ -29,7 +28,9 @@ class Post_Model extends Model {
         $this->published = $published;
         $this->topic = new Topic;
     }
-
+    
+    //shows and lists all articles from database
+    
     public function show_all() {
         $list = [];
         $req = $this->db->query('SELECT * FROM article');
@@ -55,10 +56,15 @@ class Post_Model extends Model {
         }
         return $list;
     }
+    
+    
+    //finds article on click based on article_id
+    // show everything in article 
+    // called in when opening an article for edit (open_edit)
 
     public function find_article($article_id) {
 
-        //use intval to make sure $id is an integer
+        //used intval to make sure $article_id is an integer
         $article_id = intval($article_id);
         $req = $this->db->prepare('SELECT * FROM article WHERE article_id = :article_id');
         //the query was prepared, now replace :id with the actual $id value
@@ -71,7 +77,12 @@ class Post_Model extends Model {
             throw new Exception('A real exception should go here');
         }
     }
-
+    
+    
+    //Updates title and body
+    
+    // NEED TO BE UPDATED - MISSING: PUBLISHED, IMAGE UPLOAD, USER, TOPIC
+    
     public function update($article_id, $title, $body) {
 
         $req = $this->db->prepare("UPDATE article set title=:title, body=:body where article_id=:article_id");
@@ -83,7 +94,10 @@ class Post_Model extends Model {
         $req->execute();
     }
 
-    //$article_id, $title, $body, $slug, $image, $user_id, $date_created,$last_updated, $published
+    
+    //adds article into database - getting information by controller (data comes from view)
+    //fetches last inserted article_id and couples it up with topic then inserts it in linking table
+    
 
     public function add_article($title, $body, $slug, $image, $user_id, $topic_id, $published) {
 
@@ -119,7 +133,9 @@ class Post_Model extends Model {
     }
 
 
-
+    // deletes article from database - called from post::delete
+    // on click it deletes data from database based on article_id
+    
     public function delete($article_id) {
 
         $req = $this->db->prepare('DELETE FROM article WHERE article_id = :article_id');
@@ -129,65 +145,8 @@ class Post_Model extends Model {
 
 }
 
-/*
-  // set parameters and execute
-  if (isset($_POST['name']) && $_POST['name'] != "") {
-  $filteredName = filter_input(INPUT_POST, 'name', FILTER_SANITIZE_SPECIAL_CHARS);
-  }
-  if (isset($_POST['price']) && $_POST['price'] != "") {
-  $filteredPrice = filter_input(INPUT_POST, 'price', FILTER_SANITIZE_SPECIAL_CHARS);
-  }
-  $name = $filteredName;
-  $price = $filteredPrice;
-  $req->execute();
 
-  //upload product image
-  Product::uploadFile($name);
-  }
-
-  const AllowedTypes = ['image/jpeg', 'image/jpg'];
-  const InputKey = 'myUploader';
-
-  //die() function calls replaced with trigger_error() calls
-  //replace with structured exception handling
-  public static function uploadFile(string $name) {
-
-  if (empty($_FILES[self::InputKey])) {
-  //die("File Missing!");
-  trigger_error("File Missing!");
-  }
-
-  if ($_FILES[self::InputKey]['error'] > 0) {
-  trigger_error("Handle the error! " . $_FILES[InputKey]['error']);
-  }
-
-
-  if (!in_array($_FILES[self::InputKey]['type'], self::AllowedTypes)) {
-  trigger_error("Handle File Type Not Allowed: " . $_FILES[self::InputKey]['type']);
-  }
-
-  $tempFile = $_FILES[self::InputKey]['tmp_name'];
-  $path = "C:/xampp/htdocs/MVC_Skeleton/views/images/";
-  $destinationFile = $path . $name . '.jpeg';
-
-  if (!move_uploaded_file($tempFile, $destinationFile)) {
-  trigger_error("Handle Error");
-  }
-
-  //Clean up the temp file
-  if (file_exists($tempFile)) {
-  unlink($tempFile);
-  }
-  }
-
-  public static function remove($id) {
-  $db = Db::getInstance();
-  //make sure $id is an integer
-  $id = intval($id);
-  $req = $db->prepare('delete FROM product WHERE id = :id');
-  // the query was prepared, now replace :id with the actual $id value
-  $req->execute(array('id' => $id));
-  } */
+// TOPIC CLASS FOR article_topic LINKING TABLE
 
 class Topic extends Model {
 
@@ -200,6 +159,10 @@ class Topic extends Model {
         $this->topic_name = $topic_name;
     }
 
+     // gets all topic 
+    // called in for newarticle view
+    // lists all topic in the dropdown
+    
     function get_all_topic() {
         $list = [];
         $req = $this->db->query('SELECT * FROM topic');

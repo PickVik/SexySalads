@@ -85,7 +85,7 @@ class Post_Model extends Model {
     
     //Updates title and body
     
-    // NEED TO BE UPDATED - MISSING: PUBLISHED, IMAGE UPLOAD, USER, TOPIC
+    
     
     public function update($article_id, $title, $body, $slug, $image, $published ) {
 
@@ -96,6 +96,18 @@ class Post_Model extends Model {
         $req->bindParam(':body', $body);
         $req->bindParam(':slug', $slug);
         $req->bindParam(':image', $image);
+        $req->bindParam(':published', $published,PDO::PARAM_INT);
+        $req->execute();
+    }
+    
+        public function update_without_image($article_id, $title, $body, $slug, $published ) {
+
+
+        $req = $this->db->prepare("UPDATE article set title=:title, body=:body, slug=:slug, published=:published  where article_id=:article_id");
+        $req->bindParam(':article_id', $article_id);
+        $req->bindParam(':title', $title);
+        $req->bindParam(':body', $body);
+        $req->bindParam(':slug', $slug);
         $req->bindParam(':published', $published,PDO::PARAM_INT);
         $req->execute();
     }

@@ -42,22 +42,6 @@ class Post extends Controller {
         $this->view->render('post/admin', $articles);
     }
     
-    
-    
-    //calls in find article from post_model and renders view views/post/edit page by article id 
-    function open_edit() {
-        
-        $article = $this->model->find_article($_GET['article_id']);
-
-
-        $this->view->render('post/edit', $article);
-    }
-    
-    
-    
-    
-    
-        
     // constans for upload and pic format
     const InputKey = 'myfile';
     const AllowedTypes = ['image/jpeg'];
@@ -94,6 +78,17 @@ class Post extends Controller {
             
         }
     }
+
+    
+    
+    //calls in find article from post_model and renders view views/post/edit page by article id 
+    function open_edit() {
+        
+        $article = $this->model->find_article($_GET['article_id']);
+
+
+        $this->view->render('post/edit', $article);
+    }
     
     
     // checks if the article id is there if not goes to errors page
@@ -109,11 +104,21 @@ class Post extends Controller {
             if (!isset($_POST['article_id'])) {
                 header('location: /errors');
             }
-            // we use the given id to get the correct product
-             $this->upload_pic();
-            $article = $this->model->update($_POST['article_id'], $_POST['title'], $_POST['body'], $_POST['slug'], $_FILES[Post::InputKey]['name'], $_POST['published']);
+            
+        if (!empty($_FILES[Post::InputKey]['name'])) {
+            
+            
+          
+            $this->upload_pic();
+            $article = $this->model->update($_POST['article_id'],$_POST['title'], $_POST['body'], $_POST['slug'], $_FILES[Post::InputKey]['name'], $_POST['published']);
 
             header('location: ../admin');
+	}else {
+            $article = $this->model->update_without_image($_POST['article_id'],$_POST['title'], $_POST['body'], $_POST['slug'], $_POST['published']);
+            header('location: ../admin');
+        }
+            // we use the given id to get the correct product
+             
         }
     }
     
@@ -127,8 +132,7 @@ class Post extends Controller {
         $this->view->render('post/newarticle', $topics);
     }
     
-
-
+    
     
     //calls in upload_pic from post
     // calls in add_article from post_model and couples it up with the data POSTed in the VIEW

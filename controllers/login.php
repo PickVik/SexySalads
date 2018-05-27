@@ -20,7 +20,7 @@ class Login extends Controller {
     function login(){
         
         $this->model->login();
-        header('location: ../index');
+       
         
     }
     

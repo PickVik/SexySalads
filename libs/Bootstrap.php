@@ -23,9 +23,12 @@ class Bootstrap {
 			require $file;
 		} else {
 			$this->error();
+                        return false;
 		}
 		
 		$controller = new $url[0];
+               
+                
 		$controller->loadModel($url[0]);
 
 		// calling methods
@@ -34,6 +37,7 @@ class Bootstrap {
 				$controller->{$url[1]}($url[2]);
 			} else {
 				$this->error();
+                                
 			}
 		} else {
 			if (isset($url[1])) {
@@ -46,14 +50,14 @@ class Bootstrap {
 				$controller->index();
 			}
 		}
-		
+                
 		
 	}
 	
 	function error() {
 		require 'controllers/errors.php';
 		$controller = new Errors();
-		//$controller->index();
+		$controller->index();
 		return false;
 	}
 

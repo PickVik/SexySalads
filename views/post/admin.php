@@ -1,4 +1,4 @@
-<button style="background-color: #8f50e7"><a href=../admin>Return to Admin page</a></button>
+    <button style="background-color: #8f50e7"><a href=../admin>Return to Admin page</a></button>
 
 
 <h1>Manage articles</h1>

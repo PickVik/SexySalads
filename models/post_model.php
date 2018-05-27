@@ -150,6 +150,39 @@ class Post_Model extends Model {
         
     }
 
+    public function add_article_without_image ($title, $body, $slug, $user_id, $topic_id, $published) {
+
+        $req = $this->db->prepare("INSERT into article(title, body, slug, 
+                                   user_id, published) 
+                                  VALUES (:title, :body, :slug, 
+                                   :user_id, :published)");
+
+        $req->bindParam(':title', $title);
+        $req->bindParam(':body', $body);
+        $req->bindParam(':slug', $slug);
+        
+        $req->bindParam(':user_id', $user_id);
+        $req->bindParam(':published', $published,PDO::PARAM_INT);
+
+        $req->execute();
+
+
+        $article_id = $this->db->lastInsertId();
+
+        $req1 = $this->db->prepare("INSERT into article_topic(article_id, topic_id)
+                                   VALUES(:article_id, :topic_id)");
+
+        $req1->bindParam(':article_id', $article_id, PDO::PARAM_INT);
+        $req1->bindParam(':topic_id', $topic_id, PDO::PARAM_INT);
+
+        $stm = $req1->execute();
+        if (!$stm) {
+            print_r($this->db->errorInfo());
+        }
+        
+        
+    }
+
 
     // deletes article from database - called from post::delete
     // on click it deletes data from database based on article_id

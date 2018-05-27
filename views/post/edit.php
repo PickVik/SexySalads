@@ -23,10 +23,10 @@
         <h3> <strong>Body <br></strong></h3>
             <textarea name="body" rows=10 cols="105"><?= $objects->body; ?>" </textarea> /><br>
         
-        <h3> <strong>Published <br></strong></h3>
-            <input type="text" name="published" value="<?= $objects->published; ?>" size="100"><br>
-                            <br>
-                            
+       <h3> <strong>Published <br></strong></h3>
+
+    <input type="radio" name="published" value=1/>Yes<br>
+    <input type="radio" name="published" value=0/>No<br>
                         
     
     <br>

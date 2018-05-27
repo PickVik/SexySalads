@@ -140,12 +140,22 @@ class Post extends Controller {
     
     function add_article() {
 
+        if (!empty($_FILES[Post::InputKey]['name'])){
+        
         $this->upload_pic();
         $this->model->add_article($_POST['title'], $_POST['body'], $_POST['slug'], $_FILES[Post::InputKey]['name'], $_POST['user_id'], $_POST['topic'],  $_POST['published']);
 
 
 
         header('location: ../admin');
+    }
+   else { 
+    
+       $this->model->add_article_without_image($_POST['title'], $_POST['body'], $_POST['slug'], $_POST['user_id'], $_POST['topic'],  $_POST['published']);
+       
+       header('location: ../admin');
+   }
+   
     }
     
     

@@ -38,7 +38,7 @@
                 <li><a href="">Manage comments</a></li>
                 <li><a href="">Manage users</a></li>
                 <li><a href="">Home</a></li>
-                <li><a href="">Log out</a></li>
+                <li><a href='post/logout'>Log out</a></li>
         </ul>
     
     </div>

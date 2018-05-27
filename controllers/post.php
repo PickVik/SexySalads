@@ -54,38 +54,10 @@ class Post extends Controller {
     }
     
     
-    // checks if the article id is there if not goes to errors page
-    // else calls update function from post_model
-    
-    // NEED TO BE UPDATED - MISSING: PUBLISHED, IMAGE UPLOAD, USER, TOPIC
-
-    function update() {
-
-
-
-        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-            if (!isset($_POST['article_id'])) {
-                header('location: /errors');
-            }
-            // we use the given id to get the correct product
-             $this->upload_pic();
-            $article = $this->model->update($_POST['title'], $_POST['body'], $_POST['slug'], $_FILES[Post::InputKey]['name'], $_POST['published']);
-
-            header('location: ../admin');
-        }
-    }
-    
-    // Calls in the topics and
-    // renders a view/post/newarticle page including topics
-
-    function create_newarticle() {
-
-        $topics = $this->model->topic->get_all_topic();
-
-        $this->view->render('post/newarticle', $topics);
-    }
     
     
+    
+        
     // constans for upload and pic format
     const InputKey = 'myfile';
     const AllowedTypes = ['image/jpeg'];
@@ -122,6 +94,40 @@ class Post extends Controller {
             
         }
     }
+    
+    
+    // checks if the article id is there if not goes to errors page
+    // else calls update function from post_model
+    
+    // NEED TO BE UPDATED - MISSING: PUBLISHED, IMAGE UPLOAD, USER, TOPIC
+
+    function update() {
+
+
+
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+            if (!isset($_POST['article_id'])) {
+                header('location: /errors');
+            }
+            // we use the given id to get the correct product
+             $this->upload_pic();
+            $article = $this->model->update($_POST['article_id'], $_POST['title'], $_POST['body'], $_POST['slug'], $_FILES[Post::InputKey]['name'], $_POST['published']);
+
+            header('location: ../admin');
+        }
+    }
+    
+    // Calls in the topics and
+    // renders a view/post/newarticle page including topics
+
+    function create_newarticle() {
+
+        $topics = $this->model->topic->get_all_topic();
+
+        $this->view->render('post/newarticle', $topics);
+    }
+    
+
 
     
     //calls in upload_pic from post

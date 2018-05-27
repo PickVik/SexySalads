@@ -9,6 +9,19 @@ class Admin extends Controller {
         $this->view->render('admin/index');
     }
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
    // public function topics() {
 //        $topics = $this->model->getAllTopics();
 //        $this->view->render('admin/topics', $topics);

@@ -24,6 +24,7 @@ class Bootstrap {
 		} else {
 			$this->error();
                         return false;
+                        
 		}
 		
 		$controller = new $url[0];

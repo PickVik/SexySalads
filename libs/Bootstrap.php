@@ -53,7 +53,7 @@ class Bootstrap {
 	function error() {
 		require 'controllers/errors.php';
 		$controller = new Errors();
-		//$controller->index();
+		$controller->index();
 		return false;
 	}
 

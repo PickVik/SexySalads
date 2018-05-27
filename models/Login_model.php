@@ -40,7 +40,7 @@ class Login_model extends Model {
          // NEEDS TO BE CHECKED - SHOULD TAKE YOU TO MAIN PAGE WHERE WE HAVE THE NAVBAR  
        }else {
            //error
-           header ('location: ../login');
+           header ('location: ../index');
            
        }
        print_r($data);

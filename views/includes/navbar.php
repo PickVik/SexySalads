@@ -55,7 +55,6 @@
                           <?php if (!empty($_SESSION)){ ?>
                             <li><a href="<?php echo URL; ?>Admin">Admin</a></li>
                           <?php } ?>
-
 			</ul>
                   </div>
 </div>

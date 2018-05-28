@@ -3,6 +3,12 @@
 class Admin extends Controller {
     public function __construct() {
         parent::__construct();
+        session_start();
+        if(!isset($_SESSION['Email'])){
+
+echo "Sorry, Please login and use this page";
+header("location:index");
+exit;}
     }
     
     public function index() {

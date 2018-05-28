@@ -34,7 +34,10 @@ class Login_model extends Model {
            
            //login
            Session::init();
-           Session::set('loggedIn', true);
+          
+
+           $_SESSION['Email'] = $_POST['email'];
+           
            header('location: ../admin');
           
          // NEEDS TO BE CHECKED - SHOULD TAKE YOU TO MAIN PAGE WHERE WE HAVE THE NAVBAR  
@@ -46,5 +49,5 @@ class Login_model extends Model {
        print_r($data);
    }
           
-
+ 
 }

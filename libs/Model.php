@@ -34,6 +34,24 @@ class Model {
 
         }
         
+        public function getAllPosts() {
+	
+	$sql = "SELECT * FROM article";
+	$stmt = $this->db->prepare($sql);
+        $stmt->execute();     
+        $posts = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+	return $posts;
+        
+        $final_posts = array();
+	foreach ($posts as $post) {
+		$post['topic'] = getPostTopic($post['topic_id']); 
+		array_push($final_posts, $post);
+	}
+	return $final_posts;
+
+        }
+        
         public function getPost($slug){
 	// Get single post slug
 	$slug = $_GET['post-slug'];
@@ -46,4 +64,9 @@ class Model {
         
         return $post;
 }
+        function search(){
+        $sql = "SELECT * FROM user WHERE email = '$_SESSION[Email]'";
+        $stmt = $this->db->prepare($sql);
+        $stmt->execute(NULL);     
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);}
 }

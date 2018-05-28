@@ -1,4 +1,9 @@
+<?php $model = new Model(); 
+        $results= $model->search();
 
+    if(!empty($_SESSION))
+        {foreach($results as $result){?>
+        
 <link rel="stylesheet" href="../../public/css/admin_dashboard.css" type="text/css">
 <title> Admin Dashboard </title>  
 </head>
@@ -15,7 +20,7 @@
     pdding-botton: 2px;
     width: 50px;
     height: 50px;
-    border-radius: 50px"/><br><h2>Welcome Admin!</h2></center>
+    border-radius: 50px"/><br><h2><?php echo "Welcome " . $result['first_name'] . " ". $result['last_name'];}}?></h2></center>
     </div>
    
     
@@ -80,4 +85,4 @@
 
 
 
-    
+ 

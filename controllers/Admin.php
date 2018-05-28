@@ -23,15 +23,25 @@ exit;}
     }
         
     public function register_new_admin(){
+        
+         if(isset($_POST['submit'])){
+            
+    
+            if ($_POST['password'] !== $_POST['cpassword']){
+            echo "Password does not match";
+        
+        
+    }   else {
        
         $this->model->register_new_admin($_POST['email'], $_POST['first_name'], $_POST['last_name'], $_POST['password'], $_POST['admin']);
                 
         
         header('location: ../admin');
     }
+         }
 
-    
-
+         
+         }
 
 
 

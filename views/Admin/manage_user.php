@@ -27,28 +27,6 @@
    
         <input  type="submit" name="submit" value="Register" /> 
         
-        <?php  $msg = "";
-            if(isset($_POST['submit'])){
-            
-    
-            if ($_POST['password'] !== $_POST['cpassword']){
-            $msg = "Password does not match";
         
-        
-    }   else {
-        $this->model->register_new_admin($_POST['user_id'], $_POST['email'], $_POST['first_name'], $_POST['last_name'], $_POST['password'], $_POST['admin']);
-    }
-}
-
-?>
-        <span><?php echo $msg?></span>
-      
-        
-        </form>
-   
-         </div>
-        <?php
-        // put your code here
-        ?>
     </body>
 </html>

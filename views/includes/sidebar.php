@@ -42,7 +42,7 @@
        
           
       <script>
-           function search() {
+        function search() {
                   
             var search_term = document.getElementById("search_term").value;
             var xhttp;
@@ -55,9 +55,16 @@
                     //console.log(this.responseText);
                 }
             };
-            xhttp.open("GET", "/SexySalads/filtered_posts/search?search_term="+search_term, true);
+            xhttp.open("GET", "/SexySalads/filtered_posts/search?term="+search_term, true);
             xhttp.send();   
         }
+       
+        $(document).ready(function(){
+            $("#search_term").autocomplete({        		
+                source: "/SexySalads/filtered_posts/search?format=json",
+                minLength:1
+            });
+        });
       </script>
     </div>
       

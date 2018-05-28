@@ -1,24 +1,5 @@
+    <div class="col-md-3">
 
-
-<div class="col-md-3">
-    <div class="card">
-      <?php if (empty($_SESSION)){ ?>
-            <h4>Log In</h4>
-            <div class="login">
-            
-                <form method='post' action='login/login' >
-                    <input type="email" id="email" name="email" placeholder="Email"><br>
-                    <input type="password" id="password" name="password" placeholder="Password"><br>
-                    <br>
-                    <button type="submit" class="btn" name="submit">Login</button>
-             <!-- <a href="#">New? Register here</a> -->
-                </form>
-            </div>
-        
-     <?php } else { ?>
-          <a href='post/logout'>Log out</a>
-          <?php } ?></div>  
-    
 <div class="card">
       <h4>Search by category</h4>
       
@@ -78,6 +59,22 @@
       <form><input type='email' name='email' id='email' placeholder='Email'><br><br>
           <button type='submit' name='submit' class='btn'>Submit</button></form>
     </div>
+    <div class="card">
+      <?php if (empty($_SESSION)){ ?>
+            <h4>Log In</h4>
+            <div class="login">
+            
+                <form method='post' action='login/login' >
+                    <input type="email" id="email" name="email" placeholder="Email"><br>
+                    <input type="password" id="password" name="password" placeholder="Password"><br>
+                    <br>
+                    <button type="submit" class="btn" name="submit">Login</button>
+             <!-- <a href="#">New? Register here</a> -->
+                </form>
+            </div>
+        
+     <?php } else { ?>
+          <a href='post/logout'>Log out</a>
+          <?php } ?></div>  
     
     </div>
- </div>

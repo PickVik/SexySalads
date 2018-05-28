@@ -18,24 +18,18 @@ class Login_model extends Model {
    public function login(){
        
       
-       $stm = $this->db->prepare("SELECT user_id FROM user WHERE email = :email AND password = :password"); //MD5(:password) - once PW is hashed
-       $stm->execute(array(
-           
-          ':email' =>$_POST['email'],
-           ':password'=>$_POST['password']
-       
-       ));
-       
-       
-       $data = $stm->fetchAll();
-       $row = $stm->rowCount();
-       
-       if ($row >0){
+        $stmt = $this->db->prepare("SELECT * FROM user WHERE email = ?");
+        $stmt->execute([$_POST['email']]);
+        $user = $stmt->fetch();
+       // $user = $user[4];
+        if ($user && password_verify($_POST['password'], $user[4]))
+{
+
+      // if ($row >0 && password_verify($_POST['password'], $data_array['password'])){
            
            //login
            Session::init();
           
-
            $_SESSION['Email'] = $_POST['email'];
            
            header('location: ../admin');
@@ -48,6 +42,5 @@ class Login_model extends Model {
        }
        print_r($data);
    }
-          
- 
 }
+ 

@@ -23,14 +23,14 @@ exit;}
     }
         
     public function register_new_admin(){
+       
+        $this->model->register_new_admin($_POST['email'], $_POST['first_name'], $_POST['last_name'], $_POST['password'], $_POST['admin']);
+                
         
-        $this->model->register_new_admin($_POST['user_id'], $_POST['email'], $_POST['first_name'], $_POST['last_name'], $_POST['password'], $_POST['admin']);
-        
-        
-        header('location: ../admin');
+       // header('location: ../admin');
     }
 
-
+    
 
 
 

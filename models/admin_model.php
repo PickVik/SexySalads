@@ -19,13 +19,13 @@ class Admin_model extends Model {
     
     
     
-      function register_new_admin($user_id, $email, $first_name, $last_name, $password, $admin){
+      function register_new_admin($email, $first_name, $last_name, $password, $admin){
        
       $hash = password_hash($password, PASSWORD_DEFAULT);
       $req = $this->db->prepare("INSERT INTO user (email, first_name, last_name, password, admin)
           VALUES (:email, :first_name, :last_name, :hash, :admin)");
       
-        $req->bindParam(':user_id', $user_id);
+        //$req->bindParam(':user_id', $user_id);
         $req->bindParam(':email', $email);
         $req->bindParam(':first_name', $first_name);
         $req->bindParam(':last_name', $last_name);

@@ -1,9 +1,21 @@
-<!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
+<?php  $msg = "";
+if(isset($_POST['submit'])){
+foreach($_POST as $key=>$value) {
+            if(empty($_POST[$key])) {
+            $msg = "All Fields are required";
+            break;
+        }
+    
+        if ($password !== $cpassword){
+            $msg = "Password does not match";
+        
+        
+    }   else {
+        $this->model->register_new_admin($_POST['user_id'], $_POST['email'], $_POST['first_name'], $_POST['last_name'], $_POST['password'], $_POST['admin']);
+    }
+}
+}
+?>
 <html>
     <head>
         <meta charset="UTF-8">
@@ -20,7 +32,6 @@ and open the template in the editor.
         
         <form action='../admin/register_new_admin' method="post" > 
         
-        <input class="form-control" type="hidden"  name="user_id" /> <br>
         Email Address:         <input class="form-control" type="email"  name="email" placeholder ="Email" /> <br>
         Password:              <input class="form-control" type="password" name="password" placeholder ="Password"/> <br>
         Confirm Password:      <input class="form-control" type="password"  name="cpassword" placeholder ="Confirm Password"/> <br>
@@ -34,6 +45,7 @@ and open the template in the editor.
         <input  type="submit" name="submit" value="Register" /> 
         
         
+        <span><?php echo $msg?></span>
       
         
         </form>

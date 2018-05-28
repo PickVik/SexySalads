@@ -41,7 +41,7 @@
                 <li><a href='post/admin'>Manage articles</a></li>
                 <li><a href='post/create_newarticle'>Create articles</a></li>
                 <li><a href="">Manage comments</a></li>
-                <li><a href="">Manage users</a></li>
+                <li><a href='admin/open_user'>Manage users</a></li>
                 <li><a href='index'>Home</a></li>
                 <li><a href='post/logout'>Log out</a></li>
         </ul>

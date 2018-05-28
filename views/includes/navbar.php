@@ -1,3 +1,6 @@
+<?php session_start() ?>;
+
+
 </head>
 <body>
     
@@ -48,7 +51,11 @@
 			  
                        
 			  <li><a href="<?php echo URL; ?>about">About</a></li>
-                        
+                          
+                          <?php if (!empty($_SESSION)){ ?>
+                            <li><a href="<?php echo URL; ?>Admin">Admin</a></li>
+                          <?php } ?>
+
 			</ul>
                   </div>
 </div>

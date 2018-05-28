@@ -1,7 +1,3 @@
-<?php
-
-// header here!! if admin go back to admin page
-?>
 
 <?php if (isset($_GET['post-slug'])) {
                 
@@ -17,13 +13,12 @@
 	$topics = $model->getAllTopics();
 ?>
 <title> <?php echo $post['title'] ?> </title>
-
-
-
+   
 	<!-- Navbar -->
       <?php include ( 'views/includes/navbar.php') ?>      
 	<!-- // Navbar -->
-	
+         
+    
 	<div class="row" >
                             <div class="col-md-9">
                                 <div class="card">

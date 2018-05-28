@@ -5,12 +5,12 @@ class Post extends Controller {
     // if in session then have access to these functions
     function __construct() {
         parent::__construct();
-        Session::init();
-        $logged = Session::get('loggedIn');
-        if ($logged == false) {
-            Session::destroy();
-            header('location: ../index'); 
-        }
+        session_start();
+        if(!isset($_SESSION['Email'])){
+
+//echo "Sorry, Please login and use this page";
+header("location:index");
+exit;}
     }
 
     //rendering view but not in use

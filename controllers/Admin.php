@@ -6,7 +6,7 @@ class Admin extends Controller {
         session_start();
         if(!isset($_SESSION['Email'])){
 
-echo "Sorry, Please login and use this page";
+//echo "Sorry, Please login and use this page";
 header("location:index");
 exit;}
     }

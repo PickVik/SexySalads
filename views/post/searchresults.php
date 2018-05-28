@@ -18,6 +18,7 @@
     <?php foreach ($objects as $article) {?>
 
         <div class="post" style="margin-left: 0px;width:49.5%;display:inline-block;padding:5px">
+            <a href="single_post?post-slug=<?php echo $article->slug; ?>">
             <img src="views/pictures/<?php echo $article->image; ?>" class="post_image" alt="$post['image']" style="width:100%">
             <a href="single_post?post-slug=<?php echo $article->slug; ?>">
                 <div class="post_info">

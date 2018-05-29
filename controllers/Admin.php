@@ -37,44 +37,13 @@ exit;}
                 
         
         header('location: ../admin');
+        exit();
     }
          }
 
          
          }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    // public function topics() {
-//        $topics = $this->model->getAllTopics();
-//        $this->view->render('admin/topics', $topics);
-     //   $this->view->render('admin/index');
+         function manage_images(){
+        $this->view->render('admin/manage_images');
     }
-    
-//    public function comments() {
-//        $comments = $this->model->getCommentsNeedingApproval();
-//        $this->view->render('admin/commentsApprovalDashboard', $comments);
-//    }
-    
- 
-
-
-// /admin/topics
-// /admin/comments
-
+}

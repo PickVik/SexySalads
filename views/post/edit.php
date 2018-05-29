@@ -21,7 +21,7 @@
         <h3> <strong>Slug <br></strong></h3>
             <input type="text" name="slug" value="<?= $objects->slug;?>" size="100"><br>
         <h3> <strong>Body <br></strong></h3>
-            <textarea name="body" rows=10 cols="105"><?= $objects->body; ?>" </textarea> /><br>
+            <textarea name="body" rows=10 cols="105"><?= $objects->body; ?>" </textarea><br>
         
        <h3> <strong>Published <br></strong></h3>
 

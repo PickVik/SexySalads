@@ -1,18 +1,21 @@
+<style> body{color: #8f50e7}</style>
+<title> Sexy Salads | Manage Users </title>
+</head>
 
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title></title>
-    </head>
-    <body>
+<body>
+<button style="background-color: #8f50e7"><a href=../admin>Return to Admin page</a></button>
+
+
         
         
         <div class="container" style ="color:#8f50e7">
    
           
        
-        <h2>Register new admin</h2>
-        
+        <h2 style="text-align: center">Register new admin</h2>
+        <br>
+<br>
+<div class="container" style="margin-top:5px;width:75%;border-style:dotted;border-width:2px;padding:10px;" >
         <form action='../admin/register_new_admin' method="post" > 
         
         Email Address:         <input class="form-control" type="email"  name="email" required placeholder ="Email" /> <br>
@@ -24,17 +27,13 @@
 
     <input type="radio" name="admin" value=1/>Yes<br>
     <input type="radio" name="admin" value=0/>No<br>
-   
-        <input  type="submit" name="submit" value="Register" /> 
-        
-      
-      
+
+        <input  class= "btn" style="background-color: #8f50e7" type="submit" name="submit" value="Register" /> 
         
         </form>
-   
-         </div>
-        <?php
-        // put your code here
-        ?>
+    
+</div>
+        </div>
+
     </body>
 </html>

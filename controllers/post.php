@@ -202,7 +202,4 @@ exit;}
     
          }
     
-    function manage_images(){
-        $this->view->render('post/manage_images');
-    }
 }

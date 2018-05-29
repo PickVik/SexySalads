@@ -27,6 +27,14 @@
    
         <input  type="submit" name="submit" value="Register" /> 
         
+      
+      
         
+        </form>
+   
+         </div>
+        <?php
+        // put your code here
+        ?>
     </body>
 </html>

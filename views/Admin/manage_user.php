@@ -27,12 +27,13 @@
 
     <input type="radio" name="admin" value=1/>Yes<br>
     <input type="radio" name="admin" value=0/>No<br>
-   
+
         <input  class= "btn" style="background-color: #8f50e7" type="submit" name="submit" value="Register" /> 
         
         </form>
     
 </div>
         </div>
+
     </body>
 </html>

@@ -13,7 +13,7 @@
 <h2 style="text-align: center">View all images</h2>
         <br>
 <br>
-<div class="container" style="margin-top:5px;width:75%;border-style:dotted;border-width:2px;padding:10px;" >
+<div class="container" style="margin-top:5px;width:85%;border-style:dotted;border-width:2px;padding-left:140px;padding-top:40px;padding-bottom:40px" >
     
     <?php 
              $files = glob("views/pictures/*.*");
@@ -29,8 +29,9 @@
                  $ext = strtolower(pathinfo($image, PATHINFO_EXTENSION));
                  if(in_array($ext, $supported_file))
                  {               
-                
-                 echo '<div class="flip" style="text-align: center">'; 
+                echo '<div class="row" style="display:inline-block;width:30%;margin:10px">';
+               
+                 echo '<div class="flip">'; 
                  echo '<div class="front">'; 
                  echo '<img src="../' . $image . '" alt= "Random image" style="height:100%"/><br>';
                  echo '</div><br><br>'; 
@@ -41,7 +42,7 @@
                  echo '</p>';
                  //echo basename($image);
                  
-                 echo '</div></div>';
+                 echo '</div></div></div>';
                  }else{
                      
                      continue;

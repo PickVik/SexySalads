@@ -1,5 +1,5 @@
 <style> body {color: #8f50e7}</style>
-<title> Sexy Salads | Create New Article ?> </title>
+<title> Sexy Salads | Create New Article </title>
 </head>
 
 <body>
@@ -60,7 +60,7 @@
     
      
    
-    <input type="submit" name="Add New Article" />
+    <input class= "btn" style="background-color: #8f50e7" type="submit" name="Add New Article" />
     
 </form>
 

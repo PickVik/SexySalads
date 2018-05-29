@@ -193,6 +193,20 @@ class Post_Model extends Model {
         $req->bindParam(':article_id', $article_id);
         $req->execute(array('article_id' => $article_id));
     }
+    
+
+    
+
+
+    function change_password($hash){
+
+        $sql = "UPDATE user SET Password='$hash' WHERE Email = '$_SESSION[Email]'";
+        $stmt = $this->db->prepare($sql);
+        $stmt->execute();
+        //echo PHP_EOL;
+        echo "<label>Congratulations! You have successfully changed your password</label>";
+        }   
+    
 
 }
 

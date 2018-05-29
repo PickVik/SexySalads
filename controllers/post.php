@@ -169,5 +169,40 @@ exit;}
 
         //$this->view->render('post/delete');
     }
-
+    
+    function change_password(){
+               $this->view->render('post/change_password');
+ 
+        $model = new Model();
+        $results = $model->search();
+        //print_r($results);
+        foreach($results as $result){
+        $oldpassword= $result['password'];}
+        
+        if(isset($_POST['submit'])){
+            
+            if(!password_verify($_POST['password'], $oldpassword)){
+            echo "Sorry, you entered the wrong password. Please try again.";
+            exit();
+            }
+            
+            elseif ($_POST['newpassword'] !== $_POST['cnewpassword']){
+            echo "Password does not match";
+            exit();}
+            
+            else{
+            $hash = password_hash($_POST['newpassword'], PASSWORD_DEFAULT);}
+       
+        $this->model->change_password($hash);
+                
+        //echo 'Password successfully changed!';
+        
+        //header('location: ../admin');
+    }
+    
+         }
+    
+    function manage_images(){
+        $this->view->render('post/manage_images');
+    }
 }

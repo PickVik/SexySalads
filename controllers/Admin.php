@@ -26,9 +26,9 @@ exit;}
         
          if(isset($_POST['submit'])){
              
-             
+             $this->model->email_exist();
      
-    $stmt = $this->db->prepare('SELECT email FROM user WHERE email = :email');
+    /*$stmt = $this->db->prepare('SELECT email FROM user WHERE email = :email');
     $stmt->execute(array(':email' => $_POST['email']));
     $row = $stmt->fetch();
    
@@ -37,7 +37,7 @@ exit;}
         echo "Email provided is already in use.";
         header('location: ../admin/open_user');
         exit();
-        
+        */
     }  
        
          if ($_POST['password'] !== $_POST['cpassword']){
@@ -59,7 +59,7 @@ exit;}
     }
          } 
          
-         }
+         
     
          
          function manage_images(){

@@ -49,6 +49,32 @@ class Admin_model extends Model {
                 
         
    }*/
+   
+   
+   function email_exist(){
+       
+       
+       $stmt = $this->db->prepare("SELECT email FROM user WHERE email = :email");
+       
+       $stmt->execute(array(
+
+         ':email' =>$_POST['email'],
+        
+
+         ));    
+       
+       $user = $stmt->fetch();
+
+       if ($user['email'] == $_POST['email']){
+           
+           header('location: ../admin/open_user');
+           echo 'email exists';
+           exit();
+  
+       }
+       
+   }
+    
 
 }
 

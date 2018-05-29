@@ -25,13 +25,31 @@ exit;}
     public function register_new_admin(){
         
          if(isset($_POST['submit'])){
-            
+             
+             
+     
+    $stmt = $this->db->prepare('SELECT email FROM user WHERE email = :email');
+    $stmt->execute(array(':email' => $_POST['email']));
+    $row = $stmt->fetch();
+   
+    if(!empty($row['email'])){
+        
+        echo "Email provided is already in use.";
+        header('location: ../admin/open_user');
+        exit();
+        
+    }  
+       
+         if ($_POST['password'] !== $_POST['cpassword']){
+             
+             echo "Password does not match";
+             header('location: ../admin/open_user');
+        exit();
+    }  
     
-            if ($_POST['password'] !== $_POST['cpassword']){
-            echo "Password does not match";
-        
-        
-    }   else {
+ 
+  
+      else{
        
         $this->model->register_new_admin($_POST['email'], $_POST['first_name'], $_POST['last_name'], $_POST['password'], $_POST['admin']);
                 
@@ -39,10 +57,11 @@ exit;}
         header('location: ../admin');
         exit();
     }
-         }
-
+         } 
          
          }
+    
+         
          function manage_images(){
         $this->view->render('admin/manage_images');
     }

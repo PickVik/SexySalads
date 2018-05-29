@@ -36,6 +36,19 @@ class Admin_model extends Model {
         
         echo $first_name . " is now an admin";
    }
+   
+  /* function email_exist (){
+       
+       $stmt = $this->db->prepare("SELECT * FROM user WHERE email = :email");
+       $stmt->execute(array(':email' => $_POST['email']));
+       $row = $stmt->fetch(PDO::FETCH_ASSOC);
+       if(!empty($row['email'])){
+       $msg = 'Email provided is already in use.';
+    }
+        
+                
+        
+   }*/
 
 }
 

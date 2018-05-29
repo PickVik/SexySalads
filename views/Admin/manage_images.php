@@ -10,7 +10,7 @@
         
         <div class="container" style ="color:#8f50e7">
 
-<h2 style="text-align: center">Manage images</h2>
+<h2 style="text-align: center">View all images</h2>
         <br>
 <br>
 <div class="container" style="margin-top:5px;width:75%;border-style:dotted;border-width:2px;padding:10px;" >

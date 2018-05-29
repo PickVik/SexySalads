@@ -42,7 +42,7 @@
                 <li><a href='post/create_newarticle'>Create articles</a></li>
                 <li><a href='post/change_password'>Change password</a></li>
                 <li><a href='admin/open_user'>Manage users</a></li>
-                <li><a href='admin/manage_images'>Manage images</a></li>
+                <li><a href='admin/manage_images'>View all images</a></li>
                 <li><a href='index'>Home</a></li>
                 <li><a href='post/logout'>Log out</a></li>
         </ul>

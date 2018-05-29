@@ -5,6 +5,13 @@
         {foreach($results as $result){?>
         
 <link rel="stylesheet" href="../../public/css/admin_dashboard.css" type="text/css">
+<style>
+    ul li:hover{
+        background: beige;
+        color: black;
+        text-align: center;
+    }
+</style>
 <title> Admin Dashboard </title>  
 </head>
 
@@ -30,12 +37,13 @@
     width: 220px;
     height: 700px;
     background: #8f50e7;
-    float: left;">
+    float: left;
+    font-size:medium;">
     
        
         
         
-        <ul style="list-style-type:none; padding: 40px; line-height: 300%">
+        <ul style="list-style-type:none; padding: 40px; line-height: 300%;">
                
            
                 <li><a href='post/admin'>Manage articles</a></li>

@@ -67,8 +67,9 @@ class Admin_model extends Model {
 
        if ($user['email'] == $_POST['email']){
            
-           header('location: ../admin/open_user');
-           echo 'email exists';
+           //header('location: ../admin/open_user');
+           echo 'Sorry, that email alreadt exists. Please submit a unique email.' . PHP_EOL . PHP_EOL;
+           echo '<button style="background-color: #8f50e7"><a href=../admin>Return to Admin page</a></button>';
            exit();
   
        }

@@ -60,8 +60,7 @@ body{
 
 ul li{
     padding: 20px;
-    border-bottom: 2px solid #8f50e7;
-    
+    color: black;
 }
 
 ul li:hover{

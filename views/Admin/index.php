@@ -7,9 +7,14 @@
 <link rel="stylesheet" href="../../public/css/admin_dashboard.css" type="text/css">
 <style>
     ul li:hover{
-        background: beige;
-        color: black;
+        background: black;
+        font-weight: bold;
         text-align: center;
+        text-decoration: none;
+    }
+    ul li a:hover{
+        color: #B9E6F2;
+        text-decoration: none;
     }
 </style>
 <title> Admin Dashboard </title>  

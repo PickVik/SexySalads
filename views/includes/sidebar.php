@@ -56,8 +56,8 @@
     <div class="card">
       <h4>Subscribe to my Newsletter</h4>
       <p>Please type your email address below and I'll send you my recipe of the week</p>
-      <form><input type='email' name='email' id='email' placeholder='Email'><br><br>
-          <button type='submit' name='submit' class='btn'>Submit</button></form>
+      <form method='post' action='javascript:subscribe()'><input type='email' name='email' id='email' placeholder='Email'><br><br>
+          <button type='submit' name='subscribe' class='btn'>Subscribe</button></form>
     </div>
     <div class="card">
       <?php if (empty($_SESSION)){ ?>
@@ -78,3 +78,8 @@
           <?php } ?></div>  
     
     </div>
+<script> function subscribe(){
+    alert("Thank you for subscribing! We will be in touch soon!");
+
+}
+</script>

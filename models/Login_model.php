@@ -41,6 +41,9 @@ class Login_model extends Model {
             
         } else {
             echo "Uh oh! You entered the wrong password. Please try again.";
+            
+            echo '<button style="background-color: #8f50e7"><a href=../index>Return to Login</a></button>';
+           exit();
         }
 
         

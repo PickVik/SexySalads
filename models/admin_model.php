@@ -34,7 +34,9 @@ class Admin_model extends Model {
         
         $req->execute();
         
-        echo $first_name . " is now an admin";
+        echo $first_name . " is now a Member" . PHP_EOL . PHP_EOL;
+           echo '<button style="background-color: #8f50e7"><a href=../admin>Return to Admin page</a></button>';
+           exit();
    }
    
   /* function email_exist (){

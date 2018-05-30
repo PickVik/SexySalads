@@ -13,7 +13,7 @@ require 'views/includes/navbar.php';
                     <h1 class='card-title'>  Uh oh! Something went wrong!</h1><hr>
                     
          <div class='clearfix' style='overflow: auto'>           
-    <img src="views/pictures/sad.jpg" alt='sad face' style='width:35%;float:left;margin-right: 10px'>
+             <img src="views/pictures/sad.jpg" alt='sad face' style='width:35%;float:left;margin-right: 10px'>
 
    
     <h2 class='span'

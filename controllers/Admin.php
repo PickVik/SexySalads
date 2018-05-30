@@ -42,8 +42,10 @@ exit;}
        
          if ($_POST['password'] !== $_POST['cpassword']){
              
-             echo "Password does not match";
-             header('location: ../admin/open_user');
+             echo "Sorry, your password does not match." . PHP_EOL . PHP_EOL;
+             echo '<button style="background-color: #8f50e7"><a href=../admin>Return to Admin page</a></button>';
+             //header('location: ../admin/open_user');
+             
         exit();
     }  
     

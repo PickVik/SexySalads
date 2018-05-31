@@ -50,8 +50,9 @@
         
         <ul style="list-style-type:none; padding: 40px; line-height: 300%;">
                
-           
+                          <?php if($result['admin']==1) { ?>
                 <li><a href='post/admin'>Manage articles</a></li>
+                 <?php };?>
                 <li><a href='post/create_newarticle'>Create articles</a></li>
                 <li><a href='post/change_password'>Change password</a></li>
                <?php if($result['admin']==1) { ?>

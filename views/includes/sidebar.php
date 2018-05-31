@@ -61,7 +61,7 @@
     </div>
     <div class="card">
       <?php if (empty($_SESSION)){ ?>
-            <h4>Admin Log In</h4>
+            <h4>Authorised User Log In</h4>
             <div class="login">
             
                 <form method='post' action='login/login' >
